@@ -10,7 +10,7 @@ using Random = UnityEngine.Random;
 public class Player : MonoBehaviour
 {
     public float speed = 1f;
-    public static int maxHP = 1000;
+    public static int maxHP = 1001;
     public static int TempCurrentHp;
     public static int currentHP;
     public bool facingRight = true;
