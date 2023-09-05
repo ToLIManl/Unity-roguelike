@@ -1,0 +1,19 @@
+
+Gcsharpsquid:S1125f"*Remove the unnecessary Boolean literal(s).(¤áë
+Gcsharpsquid:S3903
+"%Move 'Player' into a named namespace.(¹Ç‹òøÿÿÿÿ
+—csharpsquid:S1186‡"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(Æ¡ì½
+Bcsharpsquid:S2933+" Make 'isBeingPushed' 'readonly'.(ÑÏº¼øÿÿÿÿ
+Xcsharpsquid:S1199P"6Extract this nested code block into a separate method.(ÒÌâ–øÿÿÿÿ
+Rcsharpsquid:S1144+"0Remove the unused private field 'isBeingPushed'.(ÑÏº¼øÿÿÿÿ
+Kcsharpsquid:S1144/")Remove the unused private method 'Start'.(ûàîºûÿÿÿÿ
+Lcsharpsquid:S1144>"*Remove the unused private method 'Update'.(®±®“üÿÿÿÿ
+Qcsharpsquid:S1144M"/Remove the unused private method 'FixedUpdate'.(™Ø—¿ÿÿÿÿÿ
+Scsharpsquid:S1144d"6Remove the unused private method 'OnCollisionEnter2D'.(¾Ý²Õ
+Qcsharpsquid:S1144‡"3Remove the unused private method 'OnCollisionExit'.(Æ¡ì½
+;csharpsquid:S125i"Remove this commented out code.(Ç¦¦„
+;csharpsquid:S125z"Remove this commented out code.(é±¾³
+Acsharpsquid:S125Ž"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
+<csharpsquid:S125³"Remove this commented out code.(þ¡ÝÛ
+Acsharpsquid:S125‚"Remove this commented out code.(æÀö€øÿÿÿÿ
+<csharpsquid:S125Œ"Remove this commented out code.(‡‚›

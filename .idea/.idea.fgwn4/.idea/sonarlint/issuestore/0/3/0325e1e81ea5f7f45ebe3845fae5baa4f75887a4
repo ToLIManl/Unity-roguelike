@@ -1,0 +1,228 @@
+
+ycsharpsquid:S3923á"[Remove this conditional structure or edit its code blocks so that they're not all the same.(ğĞ¤
+Hcsharpsquid:S1125‘"*Remove the unnecessary Boolean literal(s).(ÛÈë
+Hcsharpsquid:S1125Ì"*Remove the unnecessary Boolean literal(s).(üêá
+Gcsharpsquid:S1125ë"*Remove the unnecessary Boolean literal(s).(öé?
+Hcsharpsquid:S1125ü"*Remove the unnecessary Boolean literal(s).(üêá
+Hcsharpsquid:S1125Á"*Remove the unnecessary Boolean literal(s).(üêá
+Hcsharpsquid:S1125Ï"*Remove the unnecessary Boolean literal(s).(üêá
+Mcsharpsquid:S1125ò"*Remove the unnecessary Boolean literal(s).(ôÜÀŠûÿÿÿÿ
+Mcsharpsquid:S1125ô"*Remove the unnecessary Boolean literal(s).(¤±‰ïÿÿÿÿÿ
+Hcsharpsquid:S1125™"*Remove the unnecessary Boolean literal(s).(ıÈÜó
+Gcsharpsquid:S1125°"*Remove the unnecessary Boolean literal(s).(Ÿ«Ü
+Mcsharpsquid:S1125Ò"*Remove the unnecessary Boolean literal(s).(´ÅÏõÿÿÿÿÿ
+Mcsharpsquid:S1125Ò"*Remove the unnecessary Boolean literal(s).(´ÅÏõÿÿÿÿÿ
+Hcsharpsquid:S1125€"*Remove the unnecessary Boolean literal(s).(´ÊÙ¨
+Hcsharpsquid:S1125ú"*Remove the unnecessary Boolean literal(s).(¤‰¦•
+Hcsharpsquid:S1125ˆ"*Remove the unnecessary Boolean literal(s).(¤‰¦•
+Hcsharpsquid:S1125œ"*Remove the unnecessary Boolean literal(s).(¤‰¦•
+Hcsharpsquid:S1125¦"*Remove the unnecessary Boolean literal(s).(¤‰¦•
+Mcsharpsquid:S1125´"*Remove the unnecessary Boolean literal(s).(“û§‰øÿÿÿÿ
+Mcsharpsquid:S1125´"*Remove the unnecessary Boolean literal(s).(“û§‰øÿÿÿÿ
+Mcsharpsquid:S1125ë"*Remove the unnecessary Boolean literal(s).(Í’äùüÿÿÿÿ
+Mcsharpsquid:S1125§"*Remove the unnecessary Boolean literal(s).(›¬ÄÍşÿÿÿÿ
+Mcsharpsquid:S1125´"*Remove the unnecessary Boolean literal(s).(œôÃûÿÿÿÿ
+Mcsharpsquid:S1125š"*Remove the unnecessary Boolean literal(s).(Í’äùüÿÿÿÿ
+Mcsharpsquid:S1125Ë"*Remove the unnecessary Boolean literal(s).(ëÅé’øÿÿÿÿ
+Mcsharpsquid:S1125Û"*Remove the unnecessary Boolean literal(s).(Í’äùüÿÿÿÿ
+Hcsharpsquid:S1125í"*Remove the unnecessary Boolean literal(s).(æêî·
+Mcsharpsquid:S1125Ë "*Remove the unnecessary Boolean literal(s).(½´•£ÿÿÿÿÿ
+Mcsharpsquid:S1125ß!"*Remove the unnecessary Boolean literal(s).(ÊŒ»ıÿÿÿÿ
+Mcsharpsquid:S1125é!"*Remove the unnecessary Boolean literal(s).(¸›²âûÿÿÿÿ
+Mcsharpsquid:S1125é!"*Remove the unnecessary Boolean literal(s).(¸›²âûÿÿÿÿ
+Gcsharpsquid:S1125î!"*Remove the unnecessary Boolean literal(s).(ï€¥X
+Mcsharpsquid:S1125ğ!"*Remove the unnecessary Boolean literal(s).(ËŸŸúÿÿÿÿ
+Gcsharpsquid:S1125Œ""*Remove the unnecessary Boolean literal(s).(–‰æL
+Hcsharpsquid:S1125“""*Remove the unnecessary Boolean literal(s).(‚Œè“
+Gcsharpsquid:S1125#"*Remove the unnecessary Boolean literal(s).(¨ñ¨e
+Mcsharpsquid:S1125æ#"*Remove the unnecessary Boolean literal(s).(ÂüÙıÿÿÿÿ
+Hcsharpsquid:S1125š&"*Remove the unnecessary Boolean literal(s).(½¹úÌ
+Mcsharpsquid:S1125é&"*Remove the unnecessary Boolean literal(s).(Ø¦±£ÿÿÿÿÿ
+Mcsharpsquid:S1125é&"*Remove the unnecessary Boolean literal(s).(Ø¦±£ÿÿÿÿÿ
+Hcsharpsquid:S1125·'"*Remove the unnecessary Boolean literal(s).(íˆ²Ş
+Gcsharpsquid:S1125Ô'"*Remove the unnecessary Boolean literal(s).(Ç¸ñN
+Gcsharpsquid:S1125Ÿ("*Remove the unnecessary Boolean literal(s).(›óØ
+Mcsharpsquid:S1125µ("*Remove the unnecessary Boolean literal(s).(ıÂâüÿÿÿÿ
+Mcsharpsquid:S1125µ("*Remove the unnecessary Boolean literal(s).(ıÂâüÿÿÿÿ
+Gcsharpsquid:S1125)"*Remove the unnecessary Boolean literal(s).(ºäàC
+„csharpsquid:S101"cRename class 'TextMeshProUGUI' to match pascal case naming rules, consider using 'TextMeshProUgui'.( è”şÿÿÿÿ
+ucsharpsquid:S3776¸	"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(î­ş¾ûÿÿÿÿ
+ucsharpsquid:S3776…"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Æò”ıÿÿÿÿ
+pcsharpsquid:S3776î"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(¥ïşä
+vcsharpsquid:S3776©"SRefactor this method to reduce its Cognitive Complexity from 231 to the 15 allowed.(Í¢•¼şÿÿÿÿ
+ucsharpsquid:S3776Í"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ÌÁã÷ùÿÿÿÿ
+wcsharpsquid:S3776Œ"TRefactor this method to reduce its Cognitive Complexity from 1189 to the 15 allowed.(áí½¥ùÿÿÿÿ
+ccsharpsquid:S1854İ"ERemove this useless assignment to local variable 'strikethrough_end'.(§‡ë
+dcsharpsquid:S1854Ø"ARemove this useless assignment to local variable 'underline_end'.(£¤æÁüÿÿÿÿ
+]csharpsquid:S1854#":Remove this useless assignment to local variable 'offset'.(¤›‘Ãøÿÿÿÿ
+Kcsharpsquid:S108¸&")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
+Fcsharpsquid:S108ì&")Either remove or fill this block of code.(Äé†ˆ
+Fcsharpsquid:S108×'")Either remove or fill this block of code.(Äé†ˆ
+Fcsharpsquid:S108¸(")Either remove or fill this block of code.(Äé†ˆ
+Ccsharpsquid:S2933T"'Make 'm_isRebuildingLayout' 'readonly'.(¸§ëo
+Acsharpsquid:S2933Û"#Make 'm_max_characters' 'readonly'.(œè
+Lcsharpsquid:S1066Ü"/Merge this if statement with the enclosing one.(ú¬;
+Mcsharpsquid:S1066ˆ"/Merge this if statement with the enclosing one.(Æ¯’‰
+Rcsharpsquid:S1066"/Merge this if statement with the enclosing one.(¿ğóÇûÿÿÿÿ
+Mcsharpsquid:S1066¾"/Merge this if statement with the enclosing one.(×Áô
+Rcsharpsquid:S1066ê"/Merge this if statement with the enclosing one.(È™ŞÁùÿÿÿÿ
+Rcsharpsquid:S1066Ö"/Merge this if statement with the enclosing one.(Ù½íœÿÿÿÿÿ
+Mcsharpsquid:S1066œ"/Merge this if statement with the enclosing one.(¤‰¦•
+Mcsharpsquid:S1066¦"/Merge this if statement with the enclosing one.(¤‰¦•
+Rcsharpsquid:S1066·"/Merge this if statement with the enclosing one.(Á‘‰ıÿÿÿÿ
+Rcsharpsquid:S1066ƒ"/Merge this if statement with the enclosing one.(Úšïñÿÿÿÿÿ
+¤csharpsquid:S2681+"†This line will not be executed conditionally; only the first line of this 1-line block will be. The rest will execute unconditionally.(Ï«£Æ
+Ycsharpsquid:S1199æ"6Extract this nested code block into a separate method.(ÒÌâ–øÿÿÿÿ
+csharpsquid:S3265ˆ"^Mark enum 'TMP_VertexDataUpdateFlags' with 'Flags' attribute or remove this bitwise operation.(ÕÑ«¡ÿÿÿÿÿ
+csharpsquid:S3265‹"^Mark enum 'TMP_VertexDataUpdateFlags' with 'Flags' attribute or remove this bitwise operation.(¼ÈÍ½úÿÿÿÿ
+|csharpsquid:S3265"^Mark enum 'TMP_VertexDataUpdateFlags' with 'Flags' attribute or remove this bitwise operation.(—ÿ‹
+csharpsquid:S3265”"^Mark enum 'TMP_VertexDataUpdateFlags' with 'Flags' attribute or remove this bitwise operation.(¥Š˜¦øÿÿÿÿ
+‚csharpsquid:S3265°"_Mark enum 'HorizontalAlignmentOptions' with 'Flags' attribute or remove this bitwise operation.(ôø…îşÿÿÿÿ
+‚csharpsquid:S3265°"_Mark enum 'HorizontalAlignmentOptions' with 'Flags' attribute or remove this bitwise operation.(ôø…îşÿÿÿÿ
+‚csharpsquid:S3265â#"_Mark enum 'HorizontalAlignmentOptions' with 'Flags' attribute or remove this bitwise operation.(ğ˜¨øüÿÿÿÿ
+csharpsquid:S927©"]Rename parameter 'textProcessingArray' to 'unicodeChars' to match the base class declaration.(Í¢•¼şÿÿÿÿ
+Ecsharpsquid:S1905ƒ"'Remove this unnecessary cast to 'uint'.(°¤µî
+Ecsharpsquid:S1905¶"'Remove this unnecessary cast to 'uint'.(¦ÉçÙ
+Jcsharpsquid:S1905º"'Remove this unnecessary cast to 'uint'.(Û–æëùÿÿÿÿ
+Ecsharpsquid:S1905Ù"'Remove this unnecessary cast to 'uint'.(®¥¡ı
+Fcsharpsquid:S1110Ä"#Remove these redundant parentheses.(ˆì¶‘şÿÿÿÿ
+gcsharpsquid:S2589l"EChange this condition so that it does not always evaluate to 'false'.(Ÿ±¯¤şÿÿÿÿ
+hcsharpsquid:S2589"EChange this condition so that it does not always evaluate to 'false'.(Ÿ±¯¤şÿÿÿÿ
+hcsharpsquid:S2589’"EChange this condition so that it does not always evaluate to 'false'.(Ÿ±¯¤şÿÿÿÿ
+csharpsquid:S2583Ô"mChange this condition so that it does not always evaluate to 'false'; some subsequent code is never executed.(ê¥¹şÿÿÿÿ
+‰csharpsquid:S2583ò"mChange this condition so that it does not always evaluate to 'false'; some subsequent code is never executed.(£Úw
+‰csharpsquid:S2583‰"mChange this condition so that it does not always evaluate to 'false'; some subsequent code is never executed.(£Úw
+]csharpsquid:S1117û":Rename 'mesh' which hides the property with the same name.(Ï™öÕúÿÿÿÿ
+]csharpsquid:S1117ª":Rename 'mesh' which hides the property with the same name.(Ï™öÕúÿÿÿÿ
+;csharpsquid:S125J"Remove this commented out code.(Ú°à¬
+@csharpsquid:S125]"Remove this commented out code.(äØõ¢şÿÿÿÿ
+:csharpsquid:S125f"Remove this commented out code.(µ­ÈL
+Acsharpsquid:S125ô"Remove this commented out code.(ì—Éíıÿÿÿÿ
+Acsharpsquid:S125™"Remove this commented out code.(¨ª¢ÿÿÿÿÿ
+Acsharpsquid:S125¢"Remove this commented out code.(•¿åğÿÿÿÿÿ
+<csharpsquid:S125§"Remove this commented out code.(Ú°à¬
+<csharpsquid:S125Â"Remove this commented out code.(Ú°à¬
+Acsharpsquid:S125Ô"Remove this commented out code.(Ÿîñøÿÿÿÿ
+<csharpsquid:S125ß"Remove this commented out code.(Ú°à¬
+Acsharpsquid:S125…"Remove this commented out code.(³ì±şÿÿÿÿ
+Acsharpsquid:S125¤"Remove this commented out code.(³ì±şÿÿÿÿ
+Acsharpsquid:S125¾"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
+Acsharpsquid:S125Ô"Remove this commented out code.(ÒÌâ–øÿÿÿÿ
+Acsharpsquid:S125ƒ"Remove this commented out code.(ÄĞéäùÿÿÿÿ
+Acsharpsquid:S125‘"Remove this commented out code.(Çêß­øÿÿÿÿ
+Acsharpsquid:S125¶"Remove this commented out code.(ÊêŞ“úÿÿÿÿ
+<csharpsquid:S125º"Remove this commented out code.(šßƒ
+<csharpsquid:S125Ò"Remove this commented out code.(÷ŒªØ
+<csharpsquid:S125ä"Remove this commented out code.(©…
+Acsharpsquid:S125í"Remove this commented out code.(†¸‡•ûÿÿÿÿ
+<csharpsquid:S125‹"Remove this commented out code.(†‰†
+<csharpsquid:S125É"Remove this commented out code.(ç‚¦
+<csharpsquid:S125Ñ"Remove this commented out code.(²…Øø
+Acsharpsquid:S125ù"Remove this commented out code.(ãÌá´üÿÿÿÿ
+;csharpsquid:S125ÿ"Remove this commented out code.(Øé©
+<csharpsquid:S125˜"Remove this commented out code.(ë±¿
+Acsharpsquid:S125¾"Remove this commented out code.(ëàŒ”ûÿÿÿÿ
+Acsharpsquid:S125Í"Remove this commented out code.(÷œ¨üÿÿÿÿ
+<csharpsquid:S125–"Remove this commented out code.(À‹ö
+<csharpsquid:S125¥"Remove this commented out code.(ºüèÇ
+Acsharpsquid:S125®"Remove this commented out code.(§îºåûÿÿÿÿ
+Acsharpsquid:S125»"Remove this commented out code.(Ë×Ú’üÿÿÿÿ
+<csharpsquid:S125¾"Remove this commented out code.(ï¬´
+<csharpsquid:S125Ç"Remove this commented out code.(¡Îµş
+;csharpsquid:S125Ô"Remove this commented out code.(ğ¼„`
+Acsharpsquid:S125Ş"Remove this commented out code.(š­Ú¦øÿÿÿÿ
+<csharpsquid:S125ç"Remove this commented out code.(÷¨†Ú
+Acsharpsquid:S125õ"Remove this commented out code.(Ì‘ÛÇıÿÿÿÿ
+<csharpsquid:S125ù"Remove this commented out code.(€ñË
+<csharpsquid:S125…	"Remove this commented out code.(„”¿¢
+Acsharpsquid:S125º	"Remove this commented out code.(ÚÂ™Òùÿÿÿÿ
+Acsharpsquid:S125•
+"Remove this commented out code.(¶à¡şşÿÿÿÿ
+Acsharpsquid:S125²
+"Remove this commented out code.(Ä¾öÎÿÿÿÿÿ
+Acsharpsquid:S125¸
+"Remove this commented out code.(ÔÆŠ¬üÿÿÿÿ
+<csharpsquid:S125Ê
+"Remove this commented out code.(à÷ÿÙ
+Acsharpsquid:S125Ú
+"Remove this commented out code.(šÓëÔÿÿÿÿÿ
+Acsharpsquid:S125é
+"Remove this commented out code.(ÔÆŠ¬üÿÿÿÿ
+Acsharpsquid:S125ú
+"Remove this commented out code.(Ü‰‰Öşÿÿÿÿ
+<csharpsquid:S125ş
+"Remove this commented out code.(‰õ¸Ê
+Acsharpsquid:S125…"Remove this commented out code.(Úœ÷Ñúÿÿÿÿ
+<csharpsquid:S125•"Remove this commented out code.(İ²ïË
+Acsharpsquid:S125—"Remove this commented out code.(÷ˆñ–şÿÿÿÿ
+Acsharpsquid:S125ª"Remove this commented out code.(×‡¬úÿÿÿÿ
+Acsharpsquid:S125Ş"Remove this commented out code.(×‡¬úÿÿÿÿ
+Acsharpsquid:S125ä"Remove this commented out code.(™õìúÿÿÿÿ
+<csharpsquid:S125è"Remove this commented out code.(ÿëú‡
+Acsharpsquid:S125Í"Remove this commented out code.(î·İ‚øÿÿÿÿ
+Acsharpsquid:S125è"Remove this commented out code.(œ®±üÿÿÿÿ
+<csharpsquid:S125Ü"Remove this commented out code.(ÊÆ¾¬
+;csharpsquid:S125ù"Remove this commented out code.(Ï¨š*
+<csharpsquid:S125¢"Remove this commented out code.(ßÓ®È
+Acsharpsquid:S125ª"Remove this commented out code.(«€ƒïÿÿÿÿÿ
+<csharpsquid:S125´"Remove this commented out code.(¶³æ
+<csharpsquid:S125¿"Remove this commented out code.(Ú°à¬
+<csharpsquid:S125Ì"Remove this commented out code.(ñÖÔ¶
+Acsharpsquid:S125ä"Remove this commented out code.(¸ÖÕçıÿÿÿÿ
+Acsharpsquid:S125ı"Remove this commented out code.(ÙÕÂñøÿÿÿÿ
+Acsharpsquid:S125Š"Remove this commented out code.(‘ºîÁıÿÿÿÿ
+Acsharpsquid:S125Ï"Remove this commented out code.(©Õšòúÿÿÿÿ
+<csharpsquid:S125Ú"Remove this commented out code.(ÎÈ ”
+Acsharpsquid:S125õ"Remove this commented out code.(Ê¢»şÿÿÿÿ
+Acsharpsquid:S125‰"Remove this commented out code.(­ÔÍàşÿÿÿÿ
+<csharpsquid:S125»"Remove this commented out code.(†øæ
+Acsharpsquid:S125„"Remove this commented out code.(Ğö—úüÿÿÿÿ
+Acsharpsquid:S125˜"Remove this commented out code.(Õ€“ùÿÿÿÿ
+Acsharpsquid:S125á"Remove this commented out code.(±é¡şÿÿÿÿ
+Acsharpsquid:S125ô"Remove this commented out code.(Õ€“ùÿÿÿÿ
+Acsharpsquid:S125«"Remove this commented out code.(Ğö—úüÿÿÿÿ
+Acsharpsquid:S125Ã"Remove this commented out code.(±é¡şÿÿÿÿ
+Acsharpsquid:S125×"Remove this commented out code.(Õ€“ùÿÿÿÿ
+<csharpsquid:S125À"Remove this commented out code.(Ú°à¬
+Acsharpsquid:S125ó"Remove this commented out code.(±é¡şÿÿÿÿ
+<csharpsquid:S125"Remove this commented out code.(É÷÷÷
+Acsharpsquid:S125Š"Remove this commented out code.(Õ€“ùÿÿÿÿ
+Acsharpsquid:S125Í "Remove this commented out code.(‘––Ÿüÿÿÿÿ
+Acsharpsquid:S125Ì!"Remove this commented out code.(‡‘ÇÔúÿÿÿÿ
+Acsharpsquid:S125º""Remove this commented out code.(±İ®Õûÿÿÿÿ
+<csharpsquid:S125ß""Remove this commented out code.(º’Ñİ
+<csharpsquid:S125#"Remove this commented out code.(îØÖ‡
+<csharpsquid:S125˜$"Remove this commented out code.(Ú¦à
+Acsharpsquid:S125ª$"Remove this commented out code.(‰íÚ¿úÿÿÿÿ
+Acsharpsquid:S125±$"Remove this commented out code.(äü¹“ÿÿÿÿÿ
+<csharpsquid:S125²$"Remove this commented out code.(ö‚à¤
+<csharpsquid:S125³$"Remove this commented out code.(ÒÂ©º
+Acsharpsquid:S125´$"Remove this commented out code.(Ò¹Û³üÿÿÿÿ
+Acsharpsquid:S125Õ$"Remove this commented out code.(Èêªôûÿÿÿÿ
+<csharpsquid:S125Ö$"Remove this commented out code.(‹ô÷Ô
+Acsharpsquid:S125×$"Remove this commented out code.(åÒ„âşÿÿÿÿ
+<csharpsquid:S125Ø$"Remove this commented out code.(áÿ±†
+Acsharpsquid:S125û$"Remove this commented out code.(Èêªôûÿÿÿÿ
+<csharpsquid:S125ü$"Remove this commented out code.(‹ô÷Ô
+Acsharpsquid:S125ı$"Remove this commented out code.(–úµÒÿÿÿÿÿ
+<csharpsquid:S125ş$"Remove this commented out code.(—Ì“ 
+Acsharpsquid:S125‚%"Remove this commented out code.(ìÄ¯¡üÿÿÿÿ
+<csharpsquid:S125ƒ%"Remove this commented out code.(Ù­Ñ¬
+Acsharpsquid:S125‰%"Remove this commented out code.(Ü‚²àùÿÿÿÿ
+<csharpsquid:S125Š%"Remove this commented out code.(•çç¬
+<csharpsquid:S125’%"Remove this commented out code.(É¾Õ–
+Acsharpsquid:S125“%"Remove this commented out code.(­€Ášøÿÿÿÿ
+Acsharpsquid:S125ñ%"Remove this commented out code.(á»¾Üıÿÿÿÿ
+;csharpsquid:S125à'"Remove this commented out code.(¯íÅ
+<csharpsquid:S125‰("Remove this commented out code.(¸£ôº
+Acsharpsquid:S125š)"Remove this commented out code.(Èœ›Ãøÿÿÿÿ
+;csharpsquid:S125¼)"Remove this commented out code.(ƒÛú5
+<csharpsquid:S125Á)"Remove this commented out code.(ŞøÅ
+Acsharpsquid:S125Õ)"Remove this commented out code.(Ÿ‡ºúşÿÿÿÿ
+Acsharpsquid:S125Ù)"Remove this commented out code.(…İëùøÿÿÿÿ
+Acsharpsquid:S125ò)"Remove this commented out code.(¤»‰¸ıÿÿÿÿ
+<csharpsquid:S125Í*"Remove this commented out code.(Ú°à¬
+Wcsharpsquid:S1135‚"4Complete the task associated to this 'TODO' comment.(¨Ã¥Àşÿÿÿÿ
+Rcsharpsquid:S1135ç"4Complete the task associated to this 'TODO' comment.(„§Ç¶
+Qcsharpsquid:S1135³"4Complete the task associated to this 'TODO' comment.(×èŞ
+Wcsharpsquid:S1135Î*"4Complete the task associated to this 'TODO' comment.(ù½Åüÿÿÿÿ
