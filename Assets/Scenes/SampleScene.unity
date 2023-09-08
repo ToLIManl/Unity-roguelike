@@ -3820,6 +3820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 946935134}
   - component: {fileID: 946935135}
+  - component: {fileID: 946935136}
   m_Layer: 0
   m_Name: enemy spawner
   m_TagString: Untagged
@@ -3849,7 +3850,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946935133}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 705f9507966690241b95b692e9c6064f, type: 3}
   m_Name: 
@@ -3857,6 +3858,20 @@ MonoBehaviour:
   enemyPrefab: {fileID: 8561668939943498464, guid: 74478b8c6836fec4bbb055471194db41, type: 3}
   numberOfEnemiesToSpawn: 10
   spawnInterval: 1.5
+--- !u!114 &946935136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946935133}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c2df8c55674e144a144f55e84ebc53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossPrefab: {fileID: 8561668939943498464, guid: 039fab42116d7194e92f3bbe791f2b11, type: 3}
+  HowMuchNeedToSpawnKill: 10
 --- !u!1 &962285018
 GameObject:
   m_ObjectHideFlags: 0
@@ -3943,12 +3958,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962285018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf7f202dbc71d74a8e5998c863aff6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 0
   minutes: 0
   hours: 0
   TimerText: {fileID: 1110986728}
@@ -6453,6 +6467,7 @@ MonoBehaviour:
   speed: 5
   facingRight: 1
   isInShop: 0
+  TempEnemyKills10: 0
   shopPanel: {fileID: 0}
   weapon: {fileID: 498538949}
   gameoverText: {fileID: 150041813}
@@ -8272,37 +8287,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7549152884233082413, guid: 415442b80e1a098488872ca1de3d3d96, type: 3}
   m_PrefabInstance: {fileID: 1338306321}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2073015443
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2073015444}
-  m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2073015444
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073015443}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5542644, y: -0.016436486, z: -5.95}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2077970004
 GameObject:
   m_ObjectHideFlags: 0
@@ -8827,5 +8811,4 @@ SceneRoots:
   - {fileID: 1953596120}
   - {fileID: 721174504}
   - {fileID: 1872986453}
-  - {fileID: 2073015444}
   - {fileID: 1002040774}
