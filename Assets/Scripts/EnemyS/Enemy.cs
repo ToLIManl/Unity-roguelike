@@ -39,8 +39,10 @@ public class Enemy : MonoBehaviour
     public static string Choose;
     public static string ChooseOher;
     
-    public float OffsetBar;
-    
+    public float OffsetBarZ;
+    public float OffsetBarY;
+
+
     
     
     
@@ -58,7 +60,7 @@ public class Enemy : MonoBehaviour
         bar.transform.GetChild(2).GetComponent<TMP_Text>().text = HP.ToString();
         barParent = GameObject.Find("BarParent");
         bar.transform.SetParent(barParent.transform, false);
-        bar.transform.localScale = new Vector3(0.25f, 0.5f, 1);
+        bar.transform.localScale = new Vector3(0.3f, 0.55f, 1.05f);
 
         fill.color = gradient.Evaluate(1f);
         fill.color = gradient.Evaluate(slider.normalizedValue);
@@ -67,7 +69,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        bar.transform.position = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z - OffsetBar);
+        bar.transform.position = new Vector3(transform.position.x, transform.position.y - OffsetBarY, transform.position.z - OffsetBarZ);
     }
 
 
@@ -82,7 +84,13 @@ public class Enemy : MonoBehaviour
 
             if (HP <= 0)
             {
+                Player.AllEnemyKills++;
                 Choose = "Bullet";
+   
+                Player.EnemyKills10++;
+    
+                
+                
                 Instantiate();
             }
         }
@@ -105,15 +113,15 @@ public class Enemy : MonoBehaviour
     
     void Instantiate()
     {
-        if (Choose == "Player")
-        {
-            player.GetComponent<XP>().GetXp(Random.Range(1, 4));
-            
-            if (Random.Range(0, 10) < 10)
-                Instantiate(penny, transform.position, Quaternion.identity, GameObject.Find("Pickable").transform);
-            Instantiate(effectDead, new Vector3(transform.position.x, transform.position.y, transform.position.z - 5), Quaternion.identity, GameObject.Find("Particles").transform);
-
-        }
+        // if (Choose == "Player")
+        // {
+        //     player.GetComponent<XP>().GetXp(Random.Range(1, 4));
+        //     
+        //     if (Random.Range(0, 10) < 10)
+        //         Instantiate(penny, transform.position, Quaternion.identity, GameObject.Find("Pickable").transform);
+        //     Instantiate(effectDead, new Vector3(transform.position.x, transform.position.y, transform.position.z - 5), Quaternion.identity, GameObject.Find("Particles").transform);
+        //
+        // }
 
         if (Choose == "Bullet")
         {
@@ -132,6 +140,8 @@ public class Enemy : MonoBehaviour
             {
                 PotionIs = 1;
                 Instantiate(HealthPoint, transform.position, Quaternion.identity, GameObject.Find("Pickable").transform);
+
+                
             }
 
             Instantiate(effectDead, new Vector3(transform.position.x, transform.position.y, transform.position.z - 5), Quaternion.identity, GameObject.Find("Particles").transform);
@@ -143,7 +153,28 @@ public class Enemy : MonoBehaviour
         Destroy(bar);
         Destroy(gameObject);
         
-    }                                               
+    }                                      
+    
+    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        int currentHP = Player.currentHP;
+        if (collision.gameObject.CompareTag("Player") && Player.IsShield == false)
+        {
+            
+            Player.currentHP -= Random.Range(6, 13);
+            currentHP = Mathf.Clamp(currentHP, 0, Player.maxHP);
+            Player.hpBar.SetHealth(currentHP);
+            
+            Player.TempCurrentHp = currentHP;
+            
+            // Instantiate(floatingDamage, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 3), Quaternion.identity, GameObject.Find("Effects").transform);
+            
+
+            
+            
+        }
+    }
 
     void RecalculateBar()                   
     {                                          

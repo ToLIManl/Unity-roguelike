@@ -10,7 +10,7 @@ using Random = UnityEngine.Random;
 public class Player : MonoBehaviour
 {
     public float speed = 1f;
-    public static int maxHP = 1002;
+    public static int maxHP = 100;
     public static int TempCurrentHp;
     public static int currentHP;
     public bool facingRight = true;
@@ -20,6 +20,11 @@ public class Player : MonoBehaviour
     public static bool gameOver = false;
 
     public static bool IsShield = false;
+
+    public static int AllEnemyKills;
+    public static int EnemyKills10;
+    public static int BossKills10;
+    public int TempEnemyKills10;
     
 
     
@@ -61,7 +66,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-
+        TempEnemyKills10 = EnemyKills10;
             // Get input axis values for movement
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
@@ -99,36 +104,11 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && IsShield == false)
+        if (currentHP <= 0)
         {
-            
-            //isBeingPushed = true;
-            //Vector2 pushDirection = (transform.position - collision.transform.position).normalized;
-            //float combinedSpeed = rb.velocity.magnitude + collision.rigidbody.velocity.magnitude;
-            //float pushForceFactor = Mathf.Clamp(combinedSpeed, 0.5f, 5f); // Подберите значения по вашему усмотрению
-            //rb.AddForce(pushDirection * pushForce * pushForceFactor, ForceMode2D.Impulse);
-
-            //StartCoroutine(StopBeingPushed());
-            
-            
-
-            
-            currentHP -= Random.Range(6, 13);
-            currentHP = Mathf.Clamp(currentHP, 0, maxHP);
-            hpBar.SetHealth(currentHP);
-            
-            TempCurrentHp = currentHP;
-            
-            // Instantiate(floatingDamage, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 3), Quaternion.identity, GameObject.Find("Effects").transform);
-            
-            if (currentHP <= 0)
-            {
-                gameOver = true;
-                Time.timeScale = 0;
-                gameoverText.gameObject.SetActive(true);
-            }
-            
-            
+            gameOver = true;
+            Time.timeScale = 0;
+            gameoverText.gameObject.SetActive(true);
         }
     }
 

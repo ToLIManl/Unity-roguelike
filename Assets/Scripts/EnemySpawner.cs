@@ -27,6 +27,7 @@ public class EnemySpawner : MonoBehaviour
 
             yield return new WaitForSeconds(spawnInterval);
         }
+        
     }
 
     private Vector3 GetRandomSpawnPosition()

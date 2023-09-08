@@ -6,8 +6,9 @@ using TMPro;
 
 public class EnemyCounter : MonoBehaviour
 {
-    GameObject[] enemies;
+    public static GameObject[] enemies;
     public TMP_Text enemyCounterText;
+    public static int enemyCount;
 
     // Update is called once per frame
     void Update()

@@ -79,7 +79,7 @@ public class EnemyWaves : MonoBehaviour
 
     void SpawnEnemy(Vector3 spawnPoint)
     {
-        Instantiate(enemyPrefab, new Vector3(spawnPoint.x + Random.Range(-3,3), spawnPoint.y + Random.Range(-3, 3),0), Quaternion.identity);
+        Instantiate(enemyPrefab, new Vector3(spawnPoint.x + Random.Range(-3,3), spawnPoint.y + Random.Range(-3, 3),0), Quaternion.identity, GameObject.Find("LightObject").transform);
 
     }
 }

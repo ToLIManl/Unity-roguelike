@@ -6,7 +6,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public float seconds = 1;
+    public static float seconds = 1;
     public int minutes = 0;
     public int hours = 0;
     
