@@ -12,6 +12,10 @@ public class Boss : MonoBehaviour
     public GameObject penny;
     public GameObject HealthPoint;
 
+    public static int PlayerDamage = 10;
+
+    public GameObject floatingDamage;
+
     public GameObject HPbar;
     GameObject bar;
     GameObject barParent;
@@ -21,16 +25,22 @@ public class Boss : MonoBehaviour
     public TMP_Text HP_Text;
 
     public int HP;
-    private int MaxHP;
+    public static int TempHP;
+    public int MaxHP = 15;
+    
 
 
     private int CoinsIs = 0;
     private int PotionIs = 0;
 
     private bool isDestroyed = false;
+
+
+    public static string Choose;
+    public static string ChooseOher;
     
-    
-    private string Choose;
+    public float OffsetBarZ;
+    public float OffsetBarY;
     
     
     
@@ -38,14 +48,18 @@ public class Boss : MonoBehaviour
 
     void Start()
     {
+        HP = MaxHP;
+        
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        
+        
 
         bar = Instantiate(HPbar, transform.position, Quaternion.identity);
-        bar.GetComponent<Slider>().maxValue = HP;
+        bar.GetComponent<Slider>().maxValue = MaxHP;
         bar.transform.GetChild(2).GetComponent<TMP_Text>().text = HP.ToString();
         barParent = GameObject.Find("BarParent");
         bar.transform.SetParent(barParent.transform, false);
-        bar.transform.localScale = new Vector3(0.25f, 0.5f, 1);
+        bar.transform.localScale = new Vector3(0.35f, 0.6f, 1.1f);
 
         fill.color = gradient.Evaluate(1f);
         fill.color = gradient.Evaluate(slider.normalizedValue);
@@ -54,26 +68,14 @@ public class Boss : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        bar.transform.position = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z - 1);
+        bar.transform.position = new Vector3(transform.position.x, transform.position.y - OffsetBarY, transform.position.z - OffsetBarZ);
     }
 
-    void OnCollisionEnter2D(Collision2D collision) //PLAYER
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Choose = "Player";
-            Instantiate();
-            
-            player.GetComponent<XP>().GetXp(Random.Range(1, 4));
-            
-            Destroy(gameObject);
-            Destroy(bar);
-        }
-    }
+
 
     void OnTriggerEnter2D(Collider2D collision) //BULLET
     {
-        if (isDestroyed) return; // Ignore the collision if the enemy is already being destroyed
+        if (isDestroyed) return; 
 
         if (collision.gameObject.CompareTag("Bullet"))
         {
@@ -81,57 +83,99 @@ public class Boss : MonoBehaviour
 
             if (HP <= 0)
             {
-                isDestroyed = true; // Set the flag to true to indicate that the enemy is being destroyed
+                Player.AllEnemyKills++;
                 Choose = "Bullet";
+   
+                Player.BossKills10++;
+    
+                
                 
                 Instantiate();
-
-                player.GetComponent<XP>().GetXp(Random.Range(1, 4));
-
-                Destroy(bar);
-                Destroy(gameObject);
             }
         }
     }
 
     void TakeDamage(int damage)
     {
+
         HP -= damage;
+        TempHP = HP;
+        
+        HP = Mathf.Clamp(HP, 0, MaxHP);
+    
         RecalculateBar();
+
+        
+        Instantiate(floatingDamage, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 3), Quaternion.identity, GameObject.Find("Particles").transform);
     }
+    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        int currentHP = Player.currentHP;
+        if (collision.gameObject.CompareTag("Player") && Player.IsShield == false)
+        {
+            
+            Player.currentHP -= Random.Range(20, 40);
+            currentHP = Mathf.Clamp(currentHP, 0, Player.maxHP);
+            Player.hpBar.SetHealth(currentHP);
+            
+            Player.TempCurrentHp = currentHP;
+            
+            // Instantiate(floatingDamage, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 3), Quaternion.identity, GameObject.Find("Effects").transform);
+            
+            
+        }
+    }
+
     
     void Instantiate()
     {
         if (Choose == "Player")
         {
+            player.GetComponent<XP>().GetXp(Random.Range(1, 4));
+            
             if (Random.Range(0, 10) < 10)
-                Instantiate(penny, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-            Instantiate(effectDead, new Vector3(transform.position.x, transform.position.y, transform.position.z - 5), Quaternion.identity);
+                Instantiate(penny, transform.position, Quaternion.identity, GameObject.Find("Pickable").transform);
+            Instantiate(effectDead, new Vector3(transform.position.x, transform.position.y, transform.position.z - 5), Quaternion.identity, GameObject.Find("Particles").transform);
+
         }
 
         if (Choose == "Bullet")
         {
+            player.GetComponent<XP>().GetXp(Random.Range(60, 150));
+            
             if (Random.Range(0, 10) < 7 && PotionIs != 1)
             {
                 CoinsIs = 1;
-                Instantiate(penny, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                Instantiate(penny, transform.position, Quaternion.identity, GameObject.Find("Pickable").transform);
+                
+                //Instantiate(penny, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        
             }
 
             if (Random.Range(0, 10) < 2 && CoinsIs != 1)
             {
                 PotionIs = 1;
-                Instantiate(HealthPoint, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                Instantiate(HealthPoint, transform.position, Quaternion.identity, GameObject.Find("Pickable").transform);
             }
 
-            Instantiate(effectDead, new Vector3(transform.position.x, transform.position.y, transform.position.z - 5), Quaternion.identity);
+            Instantiate(effectDead, new Vector3(transform.position.x, transform.position.y, transform.position.z - 5), Quaternion.identity, GameObject.Find("Particles").transform);
+            
         }
- 
- 
-    }                                               
+        
+        isDestroyed = true;
+        HP = 0;
+        Destroy(bar);
+        Destroy(gameObject);
+        
+    }
 
-    void RecalculateBar()                   
+    public void RecalculateBar()                   
     {                                          
         bar.GetComponent<Slider>().value = HP;
         bar.transform.GetChild(2).GetComponent<TMP_Text>().text = HP.ToString();
     }
+    
+    
+
 }
