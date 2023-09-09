@@ -17,3 +17,9 @@ U
 %Assets/Scripts/EnemyS/EnemyCounter.cs,2\6\262b5c5df2b626c512ef511c07eaa031e510ce1a
 M
 Assets/Scripts/EnemyS/Boss.cs,c\9\c9afb8ad040799074d6c91738741a07c54b51813
+K
+Assets/Scripts/UpgradeXP.cs,3\4\348814287235377347f620aecb16696ef81a102e
+K
+Assets/Scripts/Shop/Shop.cs,3\5\35543ed6c4e5561da610f0c9c9cde7ad5cd28fb8
+P
+ ProjectSettings/TagManager.asset,b\b\bb5c31022a6bdb0c8de055d7b2657e774af959a3

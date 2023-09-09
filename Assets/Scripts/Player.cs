@@ -108,6 +108,7 @@ public class Player : MonoBehaviour
         {
             gameOver = true;
             Time.timeScale = 0;
+            currentHP = 0;
             gameoverText.gameObject.SetActive(true);
         }
     }

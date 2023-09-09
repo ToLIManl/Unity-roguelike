@@ -108,7 +108,6 @@ public class Shop : MonoBehaviour
     void RandomSprites()
     {
         int randomIndex = Random.Range(1, targetSprites.Length);
-        randomIndex = 2;
         SpriteRenderer spriteRenderer = objectToCheck.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = targetSprites[randomIndex];
 

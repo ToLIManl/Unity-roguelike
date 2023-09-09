@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  RSpeed: 0
   bulletLifeTime: 5
   destroyableObjectsLayer:
     serializedVersion: 2

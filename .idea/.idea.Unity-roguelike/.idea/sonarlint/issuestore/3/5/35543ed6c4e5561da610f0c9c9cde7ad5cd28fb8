@@ -1,0 +1,8 @@
+
+tcsharpsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(®±®“üÿÿÿÿ
+\csharpsquid:S1854n"?Remove this useless assignment to local variable 'randomIndex'.(¶ÖÖ¥
+Ecsharpsquid:S3903"#Move 'Shop' into a named namespace.(äŸñ¬üÿÿÿÿ
+Lcsharpsquid:S1066Q"/Merge this if statement with the enclosing one.(Ó“µÄ
+ˆcsharpsquid:S2583‚"eChange this condition so that it does not always evaluate to 'True'. Some code paths are unreachable.(Ãæ˜Œüÿÿÿÿ
+„csharpsquid:S2583€"fChange this condition so that it does not always evaluate to 'False'. Some code paths are unreachable.(óÄâ±
+‰csharpsquid:S2583"fChange this condition so that it does not always evaluate to 'False'. Some code paths are unreachable.(åÄ¶ÿÿÿÿÿÿ

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public int speed = 20;
+    public int RSpeed;
     public float bulletLifeTime = 5;
     public LayerMask destroyableObjectsLayer;
     public GameObject impactEffect;
@@ -14,8 +15,9 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        RSpeed = Random.Range(18, 22);
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.right * RSpeed;
 
         StartCoroutine(DestroyBulletOnTime());
     }

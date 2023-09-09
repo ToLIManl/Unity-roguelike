@@ -11,12 +11,16 @@ public class BossSpawner : MonoBehaviour
     private bool CanSpawnBoss = false;
     
     private Transform playerTransform;
+    private Transform DragObjectToLight;
+    private Boss bossPrefabComponent;
     
     
     
     void Start()
     {
         playerTransform = GameObject.Find("Player").transform;
+        DragObjectToLight = GameObject.Find("LightObject").transform;
+        bossPrefabComponent = bossPrefab.GetComponent<Boss>();
     }
 
     void Update()
@@ -38,11 +42,8 @@ public class BossSpawner : MonoBehaviour
         {
                 Player.EnemyKills10 = 1;
                 CanSpawnBoss = false;
-                Instantiate(bossPrefab, spawnPosition, Quaternion.identity, GameObject.Find("LightObject").transform);
-                bossPrefab.GetComponent<Boss>().RecalculateBar();
-            
-            
-            
+                Instantiate(bossPrefab, spawnPosition, Quaternion.identity, DragObjectToLight);
+                bossPrefabComponent.RecalculateBar();
         }
         
     }
@@ -51,13 +52,13 @@ public class BossSpawner : MonoBehaviour
     private Vector3 GetRandomSpawnPosition()
     {
         Vector3 spawnPosition;
+        float minDistance = 8f; // Минимальное расстояние до игрока
 
-        // Генерируем случайную позицию
         do
         {
             spawnPosition = new Vector3(Random.Range(-20 / 2f, 20 / 2f),
                 Random.Range(-20 / 2f, 20 / 2f), 0f);
-        } while (Vector3.Distance(spawnPosition, playerTransform.position) < 2f); // Проверяем расстояние до игрока
+        } while (Vector3.Distance(spawnPosition, playerTransform.position) < minDistance);
 
         return spawnPosition;
     }
