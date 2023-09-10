@@ -27,8 +27,8 @@ public class Enemy : MonoBehaviour
     public int HP;
     public static int TempHP;
     public int MaxHP = 15;
-    
 
+    public static int XPenemy;
 
     private int CoinsIs = 0;
     private int PotionIs = 0;
@@ -37,10 +37,12 @@ public class Enemy : MonoBehaviour
 
 
     public static string Choose;
+    public static string ChooseXP;
     public static string ChooseOher;
     
     public float OffsetBarZ;
     public float OffsetBarY;
+
 
 
     
@@ -49,6 +51,8 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+
+        
         HP = MaxHP;
         
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -86,6 +90,7 @@ public class Enemy : MonoBehaviour
             {
                 Player.AllEnemyKills++;
                 Choose = "Bullet";
+                ChooseXP = "EnemyDF";
    
                 Player.EnemyKills10++;
     
@@ -125,7 +130,9 @@ public class Enemy : MonoBehaviour
 
         if (Choose == "Bullet")
         {
-            player.GetComponent<XP>().GetXp(Random.Range(1, 4));
+            XPenemy = Random.Range(1, 5);
+            player.GetComponent<XP>().GetXp(XPenemy);
+            
             
             if (Random.Range(0, 10) < 7 && PotionIs != 1)
             {

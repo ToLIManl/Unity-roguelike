@@ -28,7 +28,7 @@ public class Boss : MonoBehaviour
     public static int TempHP;
     public int MaxHP = 15;
     
-
+    public static int XPboss;
 
     private int CoinsIs = 0;
     private int PotionIs = 0;
@@ -37,6 +37,7 @@ public class Boss : MonoBehaviour
 
 
     public static string Choose;
+    public static string ChooseXP;
     public static string ChooseOher;
     
     public float OffsetBarZ;
@@ -85,6 +86,7 @@ public class Boss : MonoBehaviour
             {
                 Player.AllEnemyKills++;
                 Choose = "Bullet";
+                ChooseXP = "BossDF";
    
                 Player.BossKills10++;
     
@@ -107,6 +109,7 @@ public class Boss : MonoBehaviour
 
         
         Instantiate(floatingDamage, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 3), Quaternion.identity, GameObject.Find("Particles").transform);
+        
     }
     
     void OnCollisionEnter2D(Collision2D collision)
@@ -142,7 +145,8 @@ public class Boss : MonoBehaviour
 
         if (Choose == "Bullet")
         {
-            player.GetComponent<XP>().GetXp(Random.Range(60, 150));
+            XPboss = Random.Range(60, 150);
+            player.GetComponent<XP>().GetXp(XPboss);
             
             if (Random.Range(0, 10) < 7 && PotionIs != 1)
             {

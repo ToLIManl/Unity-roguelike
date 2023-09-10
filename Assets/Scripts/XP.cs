@@ -13,11 +13,17 @@ public class XP : MonoBehaviour
     public static int TempXP;
     
     private GameObject activeUpgradePanel;
+
+    public GameObject floatingXP;
     
     public GameObject upgradePanel;
     public Canvas canvas; 
     public TMP_Text UPText;
 
+    public float Xx;
+    public float Yy;
+    public float Zz;
+    private Vector3 newScale = new Vector3(1, 1, 1);
     
     
 
@@ -53,6 +59,8 @@ public class XP : MonoBehaviour
         //{
             xp += gotXp;
 
+            Instantiate(floatingXP,
+                new Vector3(transform.position.x - Xx + Random.Range(0,0.75f), transform.position.y - Yy + Random.Range(0,0.75f), transform.position.z - Zz + Random.Range(0,0.75f)),Quaternion.identity, GameObject.Find("XPpointsFloating").transform);
             while (xp >= slider.maxValue)
             {
                 LevelUp();

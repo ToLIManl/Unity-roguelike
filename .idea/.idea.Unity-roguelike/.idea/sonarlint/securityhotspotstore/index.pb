@@ -23,3 +23,5 @@ K
 Assets/Scripts/Shop/Shop.cs,3\5\35543ed6c4e5561da610f0c9c9cde7ad5cd28fb8
 P
  ProjectSettings/TagManager.asset,b\b\bb5c31022a6bdb0c8de055d7b2657e774af959a3
+O
+Assets/Scripts/Weapon/Bullet.cs,6\d\6de8d71019e38c2d75acb79960a6874b35c9fede
