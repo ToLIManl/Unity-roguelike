@@ -1,47 +1,46 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShieldEffect : MonoBehaviour
+public class AngryWarrior : MonoBehaviour
 {
+    
+    
     public Renderer PlayerC;
     private Color OC;
-    private Color blueColor = new Color(0f, 1f, 0.94f);
-    public float blendFactor = 0.5f;
-    public float remainingTime;
+    public float blendFactor = 0.7f;
     public float time;
-
-    public void ShieldPlayer()
+    
+    
+    public void DarkAngryWar()
     {
-        if (Player.IsShield == true)
+        if (IsHappening.IsAngry == true)
         {
             time += 5f;
         }
         else
         {
             OC = PlayerC.material.color;
-            Player.IsShield = true;
-            Color blendedColor = Color.Lerp(OC, blueColor, blendFactor);
+            IsHappening.IsAngry = true;
+            Color blendedColor = Color.Lerp(OC, Color.black, blendFactor);
             PlayerC.material.color = blendedColor;
-            time = 10f;
-            // Invoke("ShieldFalse", remainingTime);
+            time = 15f;
             
         }
     }
-
-    private void ShieldFalse()
+    
+    
+    private void AngryFalse()
     {
-        Player.IsShield = false;
+        IsHappening.IsAngry = false;
         PlayerC.material.color = OC;
         
     }
-
+    
     private void Start()
     {
         OC = PlayerC.material.color;
     }
-
     void Update()
     {
         if (time > 0)
@@ -49,7 +48,7 @@ public class ShieldEffect : MonoBehaviour
             time -= Time.deltaTime;
             if (time <= 0)
             {
-                ShieldFalse();
+                AngryFalse();
             }
         }
     }

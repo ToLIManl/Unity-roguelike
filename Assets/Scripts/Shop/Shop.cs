@@ -33,12 +33,13 @@ public class Shop : MonoBehaviour
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
             {
                 int coinValue = int.Parse(coin_text.text);
-                if (TempRandom == 0)
+                if (TempRandom == 6)
                 {
                     if (Coin.coins >= coinValue)
                     {
                         Coin.coins -= coinValue;
                         Destroy(objectToCheck);
+                        effects.GetComponent<AngryWarrior>().DarkAngryWar();
                     }
                 }
                 else if (TempRandom == 1)
@@ -113,7 +114,7 @@ public class Shop : MonoBehaviour
 
         TempRandom = randomIndex;
         
-        for (int i = 0; i < targetSprites.Length; i++)
+        for (int i = 1; i < targetSprites.Length; i++)
         {
             if (SpriteChecker.HasSprite(objectToCheck, targetSprites[i]))
             {
@@ -124,7 +125,7 @@ public class Shop : MonoBehaviour
         
         switch (randomIndex)
         {
-            case 0: coin_text.text = "6"; break;
+            case 6: coin_text.text = "18"; break;
             case 1: coin_text.text = "1"; break;
             case 2: coin_text.text = "16"; break;
             case 3: coin_text.text = "9"; break;

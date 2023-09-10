@@ -39,23 +39,41 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetAxis("Horizontal") < 0)
         {
-            // Move the weapon to the left side of the player
+            
             transform.localPosition = new Vector3(-0.6f, transform.localPosition.y, transform.localPosition.z);
-            // Flip the weapon to face left
 
             transform.localScale = new Vector3(1.428571f, 1.428571f, 1f);
             facingRight = false;
         }
         else if (Input.GetAxis("Horizontal") > 0)
         {
-            // Move the weapon to the right side of the player
+            
             transform.localPosition = new Vector3(0.6f, transform.localPosition.y, transform.localPosition.z);
-            // Flip the weapon to face right
-
+            
             transform.localScale = new Vector3(1.428571f, 1.428571f, 1f);
             facingRight = true;
         }
     }
+    
+    private void CalculateDamage()
+    {
+        damage = Random.Range(20, 25);
+        isCRIT = Random.Range(0f, 1f) <= 0.25f;
+        if (IsHappening.IsAngry == true)
+        {
+            damage += 10;
+        }
+        
+        if (isCRIT)
+        {
+            damage *= 2;
+        }
+        else
+        {
+            isCRIT = false;
+        }
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -63,25 +81,11 @@ public class Weapon : MonoBehaviour
         
         if (Time.timeScale == 0)
             return;
-        damage = Random.Range(20, 25); 
         
-        bool isCritical = Random.Range(0f, 1f) <= 0.25f;
         
-        if (isCritical)
-        {
-            damage *= 2;
-            isCRIT = true;
-        }
-        else
-        {
-            isCRIT = false;
-        }
+        
 
-        
         transform.position = new Vector3(transform.position.x, transform.position.y, -3);
-
-        new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 3);
-
         Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 180f;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -91,13 +95,7 @@ public class Weapon : MonoBehaviour
         {
             nextFireTime = Time.time + (1f / firerate); // Calculate the next allowed shooting time based on the firerate /////CHATGPT
             Shoot();
-            
-            /*if (Input.GetButton("Fire1") && Time.time > canfire) это человек сделал
-            {
-                canfire = Time.time + firerate;
-                
-  
-        */}
+            }
     }
 
     
@@ -107,6 +105,8 @@ public class Weapon : MonoBehaviour
     {
         var bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.transform.parent = GameObject.Find("Bullet parent").transform;
+        
+        CalculateDamage();
 
 
         if (TempFire != firerate)

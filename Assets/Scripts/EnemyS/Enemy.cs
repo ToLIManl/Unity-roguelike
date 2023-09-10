@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
 
 
     public static string Choose;
-    public static string ChooseXP;
+    public static string enemyChooseXP;
     public static string ChooseOher;
     
     public float OffsetBarZ;
@@ -90,7 +90,7 @@ public class Enemy : MonoBehaviour
             {
                 Player.AllEnemyKills++;
                 Choose = "Bullet";
-                ChooseXP = "EnemyDF";
+                enemyChooseXP = "EnemyDF";
    
                 Player.EnemyKills10++;
     
@@ -152,7 +152,7 @@ public class Enemy : MonoBehaviour
             }
 
             Instantiate(effectDead, new Vector3(transform.position.x, transform.position.y, transform.position.z - 5), Quaternion.identity, GameObject.Find("Particles").transform);
-            
+
         }
         
         isDestroyed = true;

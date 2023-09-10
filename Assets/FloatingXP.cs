@@ -17,32 +17,39 @@ public class FloatingXP : MonoBehaviour
         
         textMesh = GetComponent<TMP_Text>();
 
-        if (Enemy.ChooseXP == "EnemyDF" && Enemy.XPenemy != 4)
+        if (Enemy.enemyChooseXP == "EnemyDF" && (Enemy.XPenemy != 4 || Enemy.XPenemy == 3))
         {
             textMesh.text = "+" + Enemy.XPenemy + "XP";
-
-            Enemy.ChooseXP = "";
+            Enemy.enemyChooseXP = "";
         }
-        if (Boss.ChooseXP == "BossDF")
+        else if (Boss.ChooseXP == "BossDF" && !(Boss.XPboss > 130))
         {
-            textMesh.text = "+" + Boss.XPboss + "XP";
-            Boss.ChooseXP = "";
+            textMesh.text = "+" + Boss.XPboss + "XP"; Boss.ChooseXP = "";
         }
+        
+        
+        
+        
+        
+        
 
-        if (Enemy.XPenemy == 4)
+        else if (Enemy.XPenemy == 4)
         {
+            textMesh.text = "+" + Enemy.XPenemy + "XP";
             textMesh.color = Color.yellow;
-            textMesh.text = "+" + Enemy.XPenemy + "XP";
-            Enemy.ChooseXP = "";
+            Enemy.enemyChooseXP = "";
         }
             
             
-        if (Boss.XPboss >= 130 && Boss.XPboss <= 150)
+        else if (Boss.XPboss >= 130)
         {
-            textMesh.color = Color.yellow;
             textMesh.text = "+" + Boss.XPboss + "XP";
+            textMesh.color = Color.yellow;
             Boss.ChooseXP = "";
         }
+        
+        
+        
     }
     public void OnAnimationOver()
     {
