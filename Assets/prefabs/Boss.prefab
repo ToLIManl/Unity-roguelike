@@ -211,7 +211,7 @@ MonoBehaviour:
     m_NumColorKeys: 4
     m_NumAlphaKeys: 4
   fill: {fileID: 789420925774267518, guid: b5e2ed55e7002b842b790e5f17dddfc0, type: 3}
-  slider: {fileID: 1970403974416659742, guid: 20fe6c0f8fb3e4b46b708fa1d094771b, type: 3}
+  slider: {fileID: 0}
   HP_Text: {fileID: 5195605111127647570, guid: 588b3f7c1a1d05347af4637ac6f53453, type: 3}
   HP: 0
   MaxHP: 1000

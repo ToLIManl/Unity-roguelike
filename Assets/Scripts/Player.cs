@@ -28,8 +28,6 @@ public class Player : MonoBehaviour
     
 
     
-    
-
     public GameObject shopPanel;
     public GameObject weapon;
 

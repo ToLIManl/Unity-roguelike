@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Folder_SkyBlue_0: -7251987341228990337
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

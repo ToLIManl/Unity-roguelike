@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Folder_Turquoise_0: 8630923796084674848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

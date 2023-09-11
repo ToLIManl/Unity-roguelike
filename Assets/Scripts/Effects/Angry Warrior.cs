@@ -31,6 +31,7 @@ public class AngryWarrior : MonoBehaviour
             Color blendedColor = Color.Lerp(OC, Color.black, blendFactor);
             PlayerC.material.color = blendedColor;
             time = 15f;
+            PerfomanceEffect.HowManyPotions += 1;
             
             if (PerfomanceEffect.EffectTime < time)
             {
@@ -45,6 +46,7 @@ public class AngryWarrior : MonoBehaviour
     {
         IsAngry = false;
         PlayerC.material.color = OC;
+        PerfomanceEffect.HowManyPotions -= 1;
         
     }
     

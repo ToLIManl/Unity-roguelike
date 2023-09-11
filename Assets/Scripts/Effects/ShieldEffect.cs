@@ -30,9 +30,13 @@ public class ShieldEffect : MonoBehaviour
             PlayerC.material.color = blendedColor;
             time = 10f;
             // Invoke("ShieldFalse", remainingTime)
+            PerfomanceEffect.HowManyPotions += 1;
 
+            if (PerfomanceEffect.EffectTime < time)
+            {
+                PerfomanceEffect.EffectTime = time;
+            }
 
-            
         }
     }
 
@@ -40,6 +44,7 @@ public class ShieldEffect : MonoBehaviour
     {
         Player.IsShield = false;
         PlayerC.material.color = OC;
+        PerfomanceEffect.HowManyPotions -= 1;
         
     }
 

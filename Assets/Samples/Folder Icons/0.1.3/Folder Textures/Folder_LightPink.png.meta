@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Folder_LightPink_0: 7424659549020535919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

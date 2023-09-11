@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
 
     public float offset;
     
+    
     private float nextFireTime = 0f;
     
     public GameObject effects;
@@ -61,7 +62,8 @@ public class Weapon : MonoBehaviour
     {
         damage = Random.Range(20, 25);
         isCRIT = Random.Range(0f, 1f) <= 0.25f;
-        //if (AngryWarrior.IsAngry == true)
+        
+        if (effects.GetComponent<AngryWarrior>().IsAngry == true)
         {
             damage += 10;
         }

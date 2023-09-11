@@ -1,4 +1,5 @@
 
-tcsharpsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(®±®“üÿÿÿÿ
+tcsharpsquid:S3776#"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(®±®“üÿÿÿÿ
 Ecsharpsquid:S3903"#Move 'Shop' into a named namespace.(äŸñ¬üÿÿÿÿ
-Lcsharpsquid:S1066R"/Merge this if statement with the enclosing one.(Ó“µÄ
+Lcsharpsquid:S1066V"/Merge this if statement with the enclosing one.(Ó“µÄ
+Gcsharpsquid:S125z"Remove this commented out code.(™ãâÔøÿÿÿÿ8¡òÀŸ¨1

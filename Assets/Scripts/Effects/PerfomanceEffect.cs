@@ -10,20 +10,16 @@ public class PerfomanceEffect : MonoBehaviour
     public bool TempEnable = false;
     public static float EffectTime;
     public float TempEffectTime;
+    public static int HowManyPotions;
+    
 
     private bool Angry;
 
     void Update()
     {
-        TempEffectTime = EffectTime;
-        
         if (EffectTime > 0)
         {
             EffectTime -= Time.deltaTime;
-            if (EffectTime <= 0)
-            {
-                
-            }
         }
     }
 
@@ -34,31 +30,8 @@ public class PerfomanceEffect : MonoBehaviour
         effects.GetComponent<ShieldEffect>().enabled = true;
     }
     
-    public void PEshopOFF()
-    {
-        if (Angry == false)
-        {
-            effects.GetComponent<AngryWarrior>().enabled = false;
-            effects.GetComponent<ShieldEffect>().enabled = false;
-        }
-        
 
 
-    }
-
-    /*void Update()
-    {
-        
-        if (Shop.TempPE == 1 || AngryWarrior.IsAngry == true)
-        {
-            seconds += Time.deltaTime;
-            if (seconds >= 30)
-            {
-                effects.GetComponent<AngryWarrior>().enabled = false;
-                effects.GetComponent<ShieldEffect>().enabled = false;
-            }
-        }
-    }*/
     public void TTTTT()
     {
         StartCoroutine(TempUpdate());
@@ -77,11 +50,9 @@ public class PerfomanceEffect : MonoBehaviour
         TempEnable = true;
         while (TempEnable == true) 
         {
-            Angry = effects.GetComponent<AngryWarrior>().IsAngry;
             if (EffectTime <= 0)
             {
                 
-
                 seconds += Time.deltaTime;
                 
                 if (seconds >= 30)
