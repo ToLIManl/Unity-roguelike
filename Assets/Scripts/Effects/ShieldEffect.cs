@@ -9,7 +9,6 @@ public class ShieldEffect : MonoBehaviour
     private Color OC;
     private Color blueColor = new Color(0f, 1f, 0.94f);
     public float blendFactor = 0.5f;
-    public float remainingTime;
     public float time;
 
     public void ShieldPlayer()
@@ -17,6 +16,11 @@ public class ShieldEffect : MonoBehaviour
         if (Player.IsShield == true)
         {
             time += 5f;
+            
+            if (PerfomanceEffect.EffectTime < time)
+            {
+                PerfomanceEffect.EffectTime = time;
+            }
         }
         else
         {
@@ -25,7 +29,9 @@ public class ShieldEffect : MonoBehaviour
             Color blendedColor = Color.Lerp(OC, blueColor, blendFactor);
             PlayerC.material.color = blendedColor;
             time = 10f;
-            // Invoke("ShieldFalse", remainingTime);
+            // Invoke("ShieldFalse", remainingTime)
+
+
             
         }
     }
@@ -50,6 +56,7 @@ public class ShieldEffect : MonoBehaviour
             if (time <= 0)
             {
                 ShieldFalse();
+                
             }
         }
     }

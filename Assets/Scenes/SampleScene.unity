@@ -1584,6 +1584,7 @@ MonoBehaviour:
   - {fileID: 8594367754122826262, guid: 443b329b7825d04409da4757c464c30f, type: 3}
   E_text: {fileID: 485288627}
   coin_text: {fileID: 1260822969}
+  playerInRange: 0
   effects: {fileID: 1364606048}
   coinText: {fileID: 1275163016}
 --- !u!61 &418368687
@@ -3408,6 +3409,7 @@ MonoBehaviour:
   - {fileID: 8594367754122826262, guid: 443b329b7825d04409da4757c464c30f, type: 3}
   E_text: {fileID: 1465945999}
   coin_text: {fileID: 691386375}
+  playerInRange: 0
   effects: {fileID: 1364606048}
   coinText: {fileID: 1275163016}
 --- !u!61 &740449973
@@ -5219,6 +5221,7 @@ MonoBehaviour:
   - {fileID: 8594367754122826262, guid: 443b329b7825d04409da4757c464c30f, type: 3}
   E_text: {fileID: 2077970006}
   coin_text: {fileID: 1156307700}
+  playerInRange: 0
   effects: {fileID: 1364606048}
   coinText: {fileID: 1275163016}
 --- !u!61 &1241179910

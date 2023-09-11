@@ -13,6 +13,8 @@ public class Weapon : MonoBehaviour
     
     private float nextFireTime = 0f;
     
+    public GameObject effects;
+    
     public bool facingRight = true;
 
     public static float TempFire;
@@ -59,7 +61,7 @@ public class Weapon : MonoBehaviour
     {
         damage = Random.Range(20, 25);
         isCRIT = Random.Range(0f, 1f) <= 0.25f;
-        if (IsHappening.IsAngry == true)
+        //if (AngryWarrior.IsAngry == true)
         {
             damage += 10;
         }

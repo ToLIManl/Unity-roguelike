@@ -25,3 +25,25 @@ P
  ProjectSettings/TagManager.asset,b\b\bb5c31022a6bdb0c8de055d7b2657e774af959a3
 O
 Assets/Scripts/Weapon/Bullet.cs,6\d\6de8d71019e38c2d75acb79960a6874b35c9fede
+P
+ Assets/Scripts/FloatingDamage.cs,f\8\f8c6a581d96e309dba25d8603ddce1c037fb1d42
+Q
+!Assets/Resources/BillingMode.json,c\5\c5da22a9636382959e0b2f5d5d1e9d9c396e36b8
+F
+Packages/manifest.json,c\c\cc2c44fef6067b608c229f816ad03fa26e70a2f4
+K
+Packages/packages-lock.json,e\e\ee5c02414182ac2ee9793586b738cae04287b8bf
+D
+Assets/Scripts/XP.cs,5\a\5ae3034b3b3eed88112dfe402369eab763ca71c0
+U
+%Assets/Scripts/Effects/IsHappening.cs,9\f\9f45bd50310eb7c592d3dc9c907c7215cc348642
+V
+&Assets/Scripts/Effects/ShieldEffect.cs,8\a\8a645ca96ded8bfb58e3b72abaf0ef60cf48121a
+W
+'Assets/Scripts/Effects/Angry Warrior.cs,3\1\31c9eeabf865628f750bc92d204d26328a79e58c
+O
+Assets/Scripts/Weapon/Weapon.cs,f\8\f8555916c3a2f849780340609a670fa4737c4647
+D
+Assets/FloatingXP.cs,a\d\ad4d0be29c45dc51b96058d26652ef31000c9250
+Z
+*Assets/Scripts/Effects/PerfomanceEffect.cs,7\e\7e6a5698ff56e4f288736b0322e0c547b3e8c5c8

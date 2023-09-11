@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IsHappening : MonoBehaviour
 {
-        public static bool IsAngry = false;
+        
 
 
 

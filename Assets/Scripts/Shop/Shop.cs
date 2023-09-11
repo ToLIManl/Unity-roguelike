@@ -16,9 +16,11 @@ public class Shop : MonoBehaviour
 
     public TMP_Text E_text;
     public TMP_Text coin_text;
-    private bool playerInRange;
+    public bool playerInRange;
     private int TempRandom;
     public GameObject effects;
+
+    public static int TempPE = 0;
     
     
     public TMP_Text coinText;
@@ -27,6 +29,8 @@ public class Shop : MonoBehaviour
     {
         RandomSprites();
         E_text.enabled = false;
+        
+
     }
     void Update()
     {
@@ -86,6 +90,7 @@ public class Shop : MonoBehaviour
                     }
                 }
                 coinText.text = Coin.coins.ToString();
+                
             }
     }
     
@@ -95,17 +100,39 @@ public class Shop : MonoBehaviour
         {
             E_text.enabled = true;
             playerInRange = true;
+            effects.GetComponent<PerfomanceEffect>().PEshopON();
+            effects.GetComponent<PerfomanceEffect>().TTTTT();
+            effects.GetComponent<PerfomanceEffect>().TempEnable = false;
+            
+
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {
+        { 
             E_text.enabled = false;
-            playerInRange = false;
+            playerInRange = false;  
+            //effects.GetComponent<PerfomanceEffect>().PEshopOFF();
+            effects.GetComponent<PerfomanceEffect>().TTTTT();
+            
+            
         }
     }
+    
+    
     void RandomSprites()
     {
         int randomIndex = Random.Range(1, targetSprites.Length);
