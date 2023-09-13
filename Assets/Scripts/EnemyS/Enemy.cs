@@ -56,10 +56,11 @@ public class Enemy : MonoBehaviour
         HP = MaxHP;
         
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        Vector3 customPosition = new Vector3(-1, 4000, 0);
         
         
-
-        bar = Instantiate(HPbar, transform.position, Quaternion.identity);
+        bar = Instantiate(HPbar, customPosition, Quaternion.identity);
+        //bar = Instantiate(HPbar, transform.position, Quaternion.identity);
         bar.GetComponent<Slider>().maxValue = MaxHP;
         bar.transform.GetChild(2).GetComponent<TMP_Text>().text = HP.ToString();
         barParent = GameObject.Find("BarParent");
@@ -118,7 +119,7 @@ public class Enemy : MonoBehaviour
     
     void Instantiate()
     {
-        // if (Choose == "Player")
+        // if (Choose == "Player"
         // {
         //     player.GetComponent<XP>().GetXp(Random.Range(1, 4));
         //     

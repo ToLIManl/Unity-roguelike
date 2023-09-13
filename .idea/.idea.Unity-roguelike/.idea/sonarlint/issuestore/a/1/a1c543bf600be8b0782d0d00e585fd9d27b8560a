@@ -1,6 +1,7 @@
 
-Tcsharpsquid:S1125©"*Remove the unnecessary Boolean literal(s).(ËıÎ°ûÿÿÿÿ8¾ì‡«§1
+Tcsharpsquid:S1125ª"*Remove the unnecessary Boolean literal(s).(ËıÎ°ûÿÿÿÿ8¾ì‡«§1
 @csharpsquid:S3903"$Move 'Enemy' into a named namespace.(àı½}
-Bcsharpsquid:S125y"Remove this commented out code.(£ûğÅ8Ş×¿ª§1
-Hcsharpsquid:S125"Remove this commented out code.(İ˜Í¬úÿÿÿÿ8Ş×¿ª§1
-Ccsharpsquid:S125²"Remove this commented out code.(é±¾³8¿ì‡«§1
+Gcsharpsquid:S125?"Remove this commented out code.(è€Œ¼ùÿÿÿÿ8ˆ£ê¯¨1
+Gcsharpsquid:S125z"Remove this commented out code.(ÕĞÜäüÿÿÿÿ8Ş×¿ª§1
+Hcsharpsquid:S125"Remove this commented out code.(İ˜Í¬úÿÿÿÿ8Ş×¿ª§1
+Ccsharpsquid:S125³"Remove this commented out code.(é±¾³8¿ì‡«§1
