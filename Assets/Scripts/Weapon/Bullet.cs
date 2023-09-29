@@ -28,12 +28,16 @@ public class Bullet : MonoBehaviour
         {
             DestroyBullet();
         }
+        if(collision.CompareTag("Wall"))
+        {
+            DestroyBullet();
+        }
     }
 
     private void DestroyBullet()
     {
         Destroy(gameObject);
-        // Add any impact effects if needed, e.g., instantiate impactEffect at the bullet's position
+        
     }
 
     IEnumerator DestroyBulletOnTime()

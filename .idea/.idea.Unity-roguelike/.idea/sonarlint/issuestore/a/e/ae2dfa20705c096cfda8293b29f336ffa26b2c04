@@ -1,4 +1,3 @@
 
-Wcsharpsquid:S3903".Move 'SpawnInCollider' into a named namespace.(¼¹¬Ëùÿÿÿÿ8æÓŒ¯¨1
-¢csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(®±®“üÿÿÿÿ8…ÏúÑ¨1
-Tcsharpsquid:S11722"0Remove this unused method parameter 'collision'.(ŒÍÅĞ8…ÏúÑ¨1
+Ncsharpsquid:S11259"*Remove the unnecessary Boolean literal(s).(ƒÜ«ã8–…âæ­1
+Wcsharpsquid:S3903".Move 'SpawnInCollider' into a named namespace.(¼¹¬Ëùÿÿÿÿ8æÓŒ¯¨1

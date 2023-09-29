@@ -67,3 +67,9 @@ X
 (Assets/Scripts/Spawns/SpawnInCollider.cs,a\e\ae2dfa20705c096cfda8293b29f336ffa26b2c04
 W
 'Assets/Scripts/Spawns/TeleportObject.cs,2\f\2fe04992335ae0f7b79bcde9854a07f1d1869ab9
+Q
+!Assets/Scripts/InventoryScript.cs,f\2\f2088d0840195116604c5e20e127030cc4146e88
+S
+#Assets/Scripts/Weapon/WeaponHold.cs,a\7\a7858b4f325bf46fe9018cc1334e6c6ba80a2d2d
+O
+Assets/Scripts/StaminaSlider.cs,f\5\f5e22ca9e73c4b6de25dad0cc29e659fcb430983

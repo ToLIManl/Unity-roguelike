@@ -1,11 +1,20 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class SpawnInCollider : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public float spawnInterval = 0.1f;
+    public float spawnInterval = 1f;
     public static int currentEnemies;
-
+    public static int EnemyKillsInRoom = -1;
+    public static int EnemyRandom;
+    
+    public Sprite WallSprite; 
+    
+    public bool TempP = false;
+    
+    public GameObject secondObject;
+    
     
     
     private Collider2D spawnArea;
@@ -13,35 +22,31 @@ public class SpawnInCollider : MonoBehaviour
 
     private void Start()
     {
-        // Получаем коллайдер объекта, представляющего зону спавна
         spawnArea = GetComponent<Collider2D>();
-
-        // Запускаем метод SpawnEnemy каждые spawnInterval секунд
-        
+        EnemyRandom = Random.Range(10, 15);
     }
 
-    void Update()
-    {
 
-    }
-
+    
     private void SpawnEnemy()
     {
   
-        if (currentEnemies <= 15)
+        if (currentEnemies <= EnemyRandom)
         {
             // Генерируем случайную точку внутри коллайдера зоны спавна
             Vector2 randomPoint = GetRandomPointInBounds(spawnArea.bounds);
 
             // Создаем врага в случайной точке
             Instantiate(enemyPrefab, randomPoint, Quaternion.identity, GameObject.Find("LightObject").transform);
-
-            // Увеличиваем счетчик текущих врагов
+            
             currentEnemies++;
         }
         else
         {
             CancelInvoke("SpawnEnemy");
+            TempP = true;
+            currentEnemies = 0;
+
         }
     }
     
@@ -49,8 +54,39 @@ public class SpawnInCollider : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        InvokeRepeating("SpawnEnemy", 0f, spawnInterval);
+        if (collision.gameObject.CompareTag("Player") && TempP == false)
+        {
+            Collider2D collider = secondObject.GetComponent<Collider2D>();
+            collider.isTrigger = false;
+            SpriteRenderer spriteRenderer = secondObject.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = WallSprite;
+            InvokeRepeating("SpawnEnemy", 0f, spawnInterval);
+        }
+
+
+        
+
     }
+    
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            EnemyKillsInRoom++;
+            if (EnemyKillsInRoom >= EnemyRandom)
+            {
+                Collider2D collider = secondObject.GetComponent<Collider2D>();
+                collider.isTrigger = true;
+                SpriteRenderer spriteRenderer = secondObject.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = null;
+            }
+        }
+    }
+    
+    
+    
+    
+    
 
     
     

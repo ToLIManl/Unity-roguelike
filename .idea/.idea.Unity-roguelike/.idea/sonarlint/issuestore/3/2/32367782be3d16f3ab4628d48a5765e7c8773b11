@@ -1,11 +1,10 @@
 
 Ncsharpsquid:S3903
 "%Move 'Player' into a named namespace.(¹Ç‹òøÿÿÿÿ8âÈî¡§1
-csharpsquid:S1186r"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(Æ¡ì½8âÈî¡§1
-Icsharpsquid:S2933." Make 'isBeingPushed' 'readonly'.(ÑÏº¼øÿÿÿÿ8ãÈî¡§1
-Tcsharpsquid:S1172g"0Remove this unused method parameter 'collision'.(¾İ²Õ8š˜Ò¬§1
-_csharpsquid:S1199S"6Extract this nested code block into a separate method.(ÒÌâ–øÿÿÿÿ8ãÈî¡§1
-Gcsharpsquid:S125y"Remove this commented out code.(ÒÌâ–øÿÿÿÿ8ãÈî¡§1
-Ccsharpsquid:S125"Remove this commented out code.(ş¡İÛ8äÈî¡§1
-Hcsharpsquid:S125í"Remove this commented out code.(æÀö€øÿÿÿÿ8äÈî¡§1
-Ccsharpsquid:S125÷"Remove this commented out code.(‡‚›8äÈî¡§1
+csharpsquid:S1186œ"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(Æ¡ì½8ğÒŞñ­1
+Icsharpsquid:S29332" Make 'isBeingPushed' 'readonly'.(ÑÏº¼øÿÿÿÿ8ãÈî¡§1
+Ucsharpsquid:S1172"0Remove this unused method parameter 'collision'.(¾İ²Õ8ñÒŞñ­1
+Hcsharpsquid:S125£"Remove this commented out code.(ÒÌâ–øÿÿÿÿ8ñÒŞñ­1
+Ccsharpsquid:S125È"Remove this commented out code.(ş¡İÛ8ñÒŞñ­1
+Hcsharpsquid:S125—"Remove this commented out code.(æÀö€øÿÿÿÿ8ñÒŞñ­1
+Ccsharpsquid:S125¡"Remove this commented out code.(‡‚›8ñÒŞñ­1

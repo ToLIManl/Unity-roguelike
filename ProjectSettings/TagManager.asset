@@ -14,6 +14,7 @@ TagManager:
   - Heals
   - Weapon
   - Boss
+  - Wall
   layers:
   - Default
   - TransparentFX

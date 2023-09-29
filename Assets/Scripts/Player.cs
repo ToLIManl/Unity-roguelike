@@ -41,15 +41,28 @@ public class Player : MonoBehaviour
     
     public GameObject floatingDamage;
     
+    public float dashForce = 10f; // Сила рывка
+    public float dashSpeed = 5f; 
+    public float dashTime = 0.5f; 
+    
     
     
     private bool isBeingPushed = false;
+    private bool isDashing = false;
     
-
+    
+    public float maxStamina = 100f;
+    public float currentStamina;
+    public float staminaRegenRate = 10;
+    public float dashStaminaCost = 30;
+    public StaminaSlider staminaSlider; // Перетащите сюда ваш StaminaSlider из сцены
+    
 
     void Start()
     {
         TempCurrentHp = currentHP;
+        currentStamina = maxStamina;
+        
         rb = GetComponent<Rigidbody2D>();
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         rb.interpolation = RigidbodyInterpolation2D.Extrapolate;
@@ -64,33 +77,62 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        TempEnemyKills10 = EnemyKills10;
-            // Get input axis values for movement
+
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
-
-            // Calculate movement direction and normalize it
+        
         moveDirection = new Vector2(moveX, moveY).normalized;
 
         currentSpeed = moveDirection.magnitude * speed;
         
+        
+        if (Input.GetKeyDown(KeyCode.Space) && !isDashing && currentStamina >= dashStaminaCost)
+        {
+            // Нормализуем направление рывка и умножаем на силу рывка и скорость рывка
+            Vector2 dashDirection = moveDirection.normalized * dashForce *+ dashSpeed;
+            rb.AddForce(dashDirection, ForceMode2D.Impulse);
+            isDashing = true; // Указываем, что игрок в рывке
+
+            // Вычитаем стамину после рывка
+            currentStamina -= dashStaminaCost;
+
+            // Отключаем рывок через 0.5 секунды (или другое нужное время)
+            Invoke("StopDashing", dashTime);
+        }
+        
+        if(currentStamina <= 99.99f)
+        {
+            currentStamina += staminaRegenRate * Time.deltaTime;
+            currentStamina = Mathf.Clamp(currentStamina, 0f, maxStamina);
+        
+            staminaSlider.UpdateStamina(currentStamina, maxStamina);
+        }
 
     }
+    
+    
 
     void FixedUpdate()
     {
-        //if (!isBeingPushed) // Если игрок не отталкивается
+        
+        if (!isDashing)
         {
-            rb.velocity = moveDirection * currentSpeed; // Позволяем игроку двигаться
+            rb.velocity = moveDirection * currentSpeed;
         }
+
     }
 
 
 
-    public void ChooseBlock(string choise)
+    void StopDashing()
     {
-        // Handle the shop choices here
+        isDashing = false;
     }
+    
+    
+    
+    
+    
 
     public static void Heal(int amount)
     {
@@ -109,6 +151,7 @@ public class Player : MonoBehaviour
             currentHP = 0;
             gameoverText.gameObject.SetActive(true);
         }
+        
     }
 
     private void OnCollisionExit(Collision other)
@@ -117,11 +160,7 @@ public class Player : MonoBehaviour
     }
 
 
-    /*private IEnumerator StopBeingPushed()
-    {
-        yield return new WaitForSeconds(waitSec); // Подберите подходящее значение задержки
-        isBeingPushed = false; // Отключаем отталкивание
-    }*/
+
 
 
     public static void UpdateBars()
