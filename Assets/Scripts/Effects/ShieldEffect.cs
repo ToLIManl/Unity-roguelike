@@ -9,9 +9,10 @@ public class ShieldEffect : MonoBehaviour
     private Color OC;
     private Color blueColor = new Color(0f, 1f, 0.94f);
     public float blendFactor = 0.5f;
+    public static bool TempIsShield = false;
     public float time;
 
-    public void ShieldPlayer()
+    public void ShieldPlayer(float TimeEffect)
     {
         if (Player.IsShield == true)
         {
@@ -26,9 +27,10 @@ public class ShieldEffect : MonoBehaviour
         {
             OC = PlayerC.material.color;
             Player.IsShield = true;
+            TempIsShield = true;
             Color blendedColor = Color.Lerp(OC, blueColor, blendFactor);
             PlayerC.material.color = blendedColor;
-            time = 10f;
+            time = TimeEffect;
             // Invoke("ShieldFalse", remainingTime)
             PerfomanceEffect.HowManyPotions += 1;
 
@@ -43,6 +45,7 @@ public class ShieldEffect : MonoBehaviour
     private void ShieldFalse()
     {
         Player.IsShield = false;
+        TempIsShield = false;
         PlayerC.material.color = OC;
         PerfomanceEffect.HowManyPotions -= 1;
         

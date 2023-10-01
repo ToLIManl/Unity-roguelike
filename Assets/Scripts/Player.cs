@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 {
     public float speed = 1f;
     public static int maxHP = 100;
-    public static int TempCurrentHp;
+    public static int TempMaxHp;
     public static int currentHP;
     public bool facingRight = true;
     public bool isInShop = false;
@@ -24,6 +24,9 @@ public class Player : MonoBehaviour
     public static int AllEnemyKills;
     public static int EnemyKills10;
     public static int BossKills10;
+    
+    
+    public static int TempHp;
     public int TempEnemyKills10;
     
 
@@ -60,7 +63,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        TempCurrentHp = currentHP;
+        TempHp = currentHP;
         currentStamina = maxStamina;
         
         rb = GetComponent<Rigidbody2D>();
@@ -77,6 +80,22 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (TempHp != currentHP)
+        {
+            TempHp = currentHP;
+            currentHP = Mathf.Clamp(currentHP, 0, Player.maxHP);
+            Player.hpBar.SetHealth(currentHP);
+            
+            Player.TempHp = currentHP;
+            if (currentHP <= 0)
+            {
+                gameOver = true;
+                Time.timeScale = 0;
+                currentHP = 0;
+                TempHp = 0;
+                gameoverText.gameObject.SetActive(true);
+            }
+        }
 
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
@@ -97,10 +116,14 @@ public class Player : MonoBehaviour
             currentStamina -= dashStaminaCost;
 
             // Отключаем рывок через 0.5 секунды (или другое нужное время)
+            if (ShieldEffect.TempIsShield == false)
+            {
+                Player.IsShield = true;
+            }
             Invoke("StopDashing", dashTime);
         }
         
-        if(currentStamina <= 99.99f)
+        if (currentStamina <= 99.99f)
         {
             currentStamina += staminaRegenRate * Time.deltaTime;
             currentStamina = Mathf.Clamp(currentStamina, 0f, maxStamina);
@@ -126,6 +149,11 @@ public class Player : MonoBehaviour
 
     void StopDashing()
     {
+        if (ShieldEffect.TempIsShield == false)
+        {
+            Player.IsShield = false;
+        }
+        
         isDashing = false;
     }
     
@@ -144,13 +172,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (currentHP <= 0)
-        {
-            gameOver = true;
-            Time.timeScale = 0;
-            currentHP = 0;
-            gameoverText.gameObject.SetActive(true);
-        }
+
         
     }
 
@@ -160,13 +182,10 @@ public class Player : MonoBehaviour
     }
 
 
-
-
-
     public static void UpdateBars()
     {
         hpBar.slider.maxValue = maxHP;
-        HP_Text.text = TempCurrentHp.ToString();
+        HP_Text.text = TempMaxHp.ToString();
     }
     
 }

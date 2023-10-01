@@ -7,19 +7,28 @@ public class Coin : MonoBehaviour
 {
     public static int coins = 100;
     public TMP_Text coinText;
+    private int Tempcoins;
 
     void Start()
     {
         coinText.text = coins.ToString();
+        Tempcoins = coins;
     }
 
     void Update()
     {
-        if (coins < 0)
+        if (Tempcoins != coins)
         {
-            coins = 0;
+            Tempcoins = coins;
             coinText.text = coins.ToString();
+            if (coins < 0)
+            {
+                coins = 0;
+                coinText.text = coins.ToString();
+            }
+            
         }
+
             
     }
 
@@ -34,9 +43,9 @@ public class Coin : MonoBehaviour
     private void CollectCoin(GameObject coinObject)
     {
         coins++;
-        coinText.text = coins.ToString();
         Destroy(coinObject);
     }
+    
 }
 
 

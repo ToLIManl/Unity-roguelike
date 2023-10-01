@@ -73,3 +73,5 @@ S
 #Assets/Scripts/Weapon/WeaponHold.cs,a\7\a7858b4f325bf46fe9018cc1334e6c6ba80a2d2d
 O
 Assets/Scripts/StaminaSlider.cs,f\5\f5e22ca9e73c4b6de25dad0cc29e659fcb430983
+G
+Assets/Scripts/HPbar.cs,7\9\792b5e1f1b89fc7dee24cc5356a0a2781780ebdc

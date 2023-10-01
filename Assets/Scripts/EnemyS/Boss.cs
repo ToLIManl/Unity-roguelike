@@ -119,10 +119,6 @@ public class Boss : MonoBehaviour
         {
             
             Player.currentHP -= Random.Range(20, 40);
-            currentHP = Mathf.Clamp(currentHP, 0, Player.maxHP);
-            Player.hpBar.SetHealth(currentHP);
-            
-            Player.TempCurrentHp = currentHP;
             
             // Instantiate(floatingDamage, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 3), Quaternion.identity, GameObject.Find("Effects").transform);
             

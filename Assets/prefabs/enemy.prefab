@@ -144,9 +144,7 @@ MonoBehaviour:
   MaxHP: 15
   OffsetBarZ: 29.57
   OffsetBarY: 0.6
-  xx: 0.3
-  yy: 0.55
-  zz: 1.05
+  time: 0
 --- !u!50 &-627800351761150283
 Rigidbody2D:
   serializedVersion: 4

@@ -60,7 +60,7 @@ public class Shop : MonoBehaviour
                     {
                         Coin.coins -= coinValue;
                         Destroy(objectToCheck);
-                        effects.GetComponent<ShieldEffect>().ShieldPlayer();
+                        effects.GetComponent<ShieldEffect>().ShieldPlayer(10);
 
                     } 
                 }

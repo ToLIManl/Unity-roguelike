@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -42,6 +44,9 @@ public class Enemy : MonoBehaviour
     
     public float OffsetBarZ;
     public float OffsetBarY;
+
+    private bool IsDamage = false;
+    public bool time = false;
 
 
 
@@ -164,9 +169,9 @@ public class Enemy : MonoBehaviour
     }                                      
     
     
-    void OnCollisionEnter2D(Collision2D collision)
+    /*void OnCollisionEnter2D(Collision2D collision)
     {
-        int currentHP = Player.currentHP;
+        /*int currentHP = Player.currentHP;
         if (collision.gameObject.CompareTag("Player") && Player.IsShield == false)
         {
             
@@ -181,7 +186,47 @@ public class Enemy : MonoBehaviour
 
             
             
+        }#1#
+    }*/
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        int currentHP = Player.currentHP;
+        if (collision.gameObject.CompareTag("Player") && Player.IsShield == false)
+        {
+            
+            // if (IsDamage == false)
+            // {
+            //     
+            //
+            //     Player.currentHP -= Random.Range(6, 13);
+            //     IsDamage = true;
+            // }
+                // Instantiate(floatingDamage, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 3), Quaternion.identity, GameObject.Find("Effects").transform);
+ 
+            if (time == false)
+            {
+                time = true;
+                InvokeRepeating("DamageToPlayer", 0f, 2f);
+            }
+
+                
+            
+
+
         }
+    }
+
+    void DamageToPlayer()
+    {
+        Player.currentHP -= Random.Range(6, 13);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        //IsDamage = false;
+        CancelInvoke("DamageToPlayer");
+        time = false;
     }
 
     void RecalculateBar()                   
