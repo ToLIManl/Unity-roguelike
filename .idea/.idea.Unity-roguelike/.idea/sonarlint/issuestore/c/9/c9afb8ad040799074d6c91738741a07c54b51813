@@ -1,5 +1,6 @@
 
 Scsharpsquid:S1125v"*Remove the unnecessary Boolean literal(s).(ËıÎ°ûÿÿÿÿ8ìˆÕ¬§1
 Lcsharpsquid:S3903"#Move 'Boss' into a named namespace.(ºñÕÿÿÿÿÿ8ûûî¦§1
-Bcsharpsquid:S125"Remove this commented out code.(é±¾³8ìˆÕ¬§1
-Hcsharpsquid:S125œ"Remove this commented out code.(İ˜Í¬úÿÿÿÿ8Ş¾î¦§1
+Vcsharpsquid:S1481u"-Remove the unused local variable 'currentHP'.(€Ğç·ÿÿÿÿÿ8ÀÍ¥ê®1
+Bcsharpsquid:S125{"Remove this commented out code.(é±¾³8ìˆÕ¬§1
+Hcsharpsquid:S125˜"Remove this commented out code.(İ˜Í¬úÿÿÿÿ8Ş¾î¦§1

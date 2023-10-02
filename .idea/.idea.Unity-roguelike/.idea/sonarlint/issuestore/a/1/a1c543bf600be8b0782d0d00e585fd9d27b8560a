@@ -1,0 +1,14 @@
+
+Tcsharpsquid:S1125Ã"*Remove the unnecessary Boolean literal(s).(ËıÎ°ûÿÿÿÿ8Ğ‘ûç®1
+Tcsharpsquid:S1125Ï"*Remove the unnecessary Boolean literal(s).(ÇÔ®Ïúÿÿÿÿ8†şÊê®1
+Gcsharpsquid:S3903	"$Move 'Enemy' into a named namespace.(àı½}8º«÷å®1
+Dcsharpsquid:S29330"Make 'IsDamage' 'readonly'.(ğÈ¾úÿÿÿÿ8øÀËê®1
+Ycsharpsquid:S1066Ï"/Merge this if statement with the enclosing one.(ÇÔ®Ïúÿÿÿÿ8‚¡Ëê®1
+Ucsharpsquid:S1172á"0Remove this unused method parameter 'collision'.(úØöò8üÁÈè®1
+Wcsharpsquid:S1481Â"-Remove the unused local variable 'currentHP'.(€Ğç·ÿÿÿÿÿ8ï¨šê®1
+Gcsharpsquid:S125D"Remove this commented out code.(è€Œ¼ùÿÿÿÿ8º«÷å®1
+Gcsharpsquid:S125"Remove this commented out code.(ÕĞÜäüÿÿÿÿ8º«÷å®1
+Hcsharpsquid:S125”"Remove this commented out code.(İ˜Í¬úÿÿÿÿ8º«÷å®1
+Hcsharpsquid:S125­"Remove this commented out code.(ÒÌâ–øÿÿÿÿ8ÜÔÃé®1
+Hcsharpsquid:S125Æ"Remove this commented out code.(¯‹­ğùÿÿÿÿ8ƒ¡Ëê®1
+Ccsharpsquid:S125ã"Remove this commented out code.(×“Ö8ùÀËê®1

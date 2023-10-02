@@ -75,3 +75,9 @@ O
 Assets/Scripts/StaminaSlider.cs,f\5\f5e22ca9e73c4b6de25dad0cc29e659fcb430983
 G
 Assets/Scripts/HPbar.cs,7\9\792b5e1f1b89fc7dee24cc5356a0a2781780ebdc
+J
+Assets/Scripts/Teleport.cs,8\8\88fb229f0515e21572a4d3b02cac51505632412f
+K
+Assets/Scripts/Teleport2.cs,1\8\18c3bb4690dd632c82e1cac61e4b9f6d6d6714d0
+M
+Assets/Scripts/Others/Coin.cs,9\9\99315540808e3f537bbba668ca17a783b84a0b14

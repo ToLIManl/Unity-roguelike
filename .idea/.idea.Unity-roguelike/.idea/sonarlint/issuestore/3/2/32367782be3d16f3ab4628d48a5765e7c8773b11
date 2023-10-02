@@ -1,0 +1,11 @@
+
+Scsharpsquid:S1125|"*Remove the unnecessary Boolean literal(s).(©†ªèüÿÿÿÿ8°ÔÍæ®1
+Tcsharpsquid:S1125¤"*Remove the unnecessary Boolean literal(s).(©†ªèüÿÿÿÿ8¢Ûßæ®1
+Ncsharpsquid:S3903
+"%Move 'Player' into a named namespace.(¹Ç‹òøÿÿÿÿ8¶œ÷å®1
+csharpsquid:S1186»"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(¾İ²Õ8ıøÏê®1
+csharpsquid:S1186Á"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(Æ¡ì½8ó¤Îæ®1
+Icsharpsquid:S29337" Make 'isBeingPushed' 'readonly'.(ÑÏº¼øÿÿÿÿ8·œ÷å®1
+Ccsharpsquid:S125æ"Remove this commented out code.(ş¡İÛ8ô¤Îæ®1
+Hcsharpsquid:S125µ"Remove this commented out code.(æÀö€øÿÿÿÿ8ô¤Îæ®1
+Ccsharpsquid:S125¿"Remove this commented out code.(‡‚›8ô¤Îæ®1

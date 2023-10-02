@@ -46,9 +46,11 @@ public class Player : MonoBehaviour
     
     public float dashForce = 10f; // Сила рывка
     public float dashSpeed = 5f; 
-    public float dashTime = 0.5f; 
+    public float dashTime = 0.5f;
+
+    private Renderer PlayerC;
     
-    
+    private Color OC;
     
     private bool isBeingPushed = false;
     private bool isDashing = false;
@@ -65,6 +67,9 @@ public class Player : MonoBehaviour
     {
         TempHp = currentHP;
         currentStamina = maxStamina;
+        PlayerC = GetComponent<Renderer>();
+        
+        OC = PlayerC.material.color;
         
         rb = GetComponent<Rigidbody2D>();
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
@@ -120,6 +125,13 @@ public class Player : MonoBehaviour
             {
                 Player.IsShield = true;
             }
+            
+            Color blendedColor = Color.Lerp(OC, new Color(0f, 1f, 0.94f),0.5f);
+            PlayerC.material.color = blendedColor;
+            
+            
+            
+            
             Invoke("StopDashing", dashTime);
         }
         
@@ -152,7 +164,9 @@ public class Player : MonoBehaviour
         if (ShieldEffect.TempIsShield == false)
         {
             Player.IsShield = false;
+            PlayerC.material.color = OC;
         }
+        
         
         isDashing = false;
     }
