@@ -5,15 +5,18 @@ public class SpawnInCollider : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public float spawnInterval = 1f;
-    public static int currentEnemies;
-    public static int EnemyKillsInRoom = -1;
-    public static int EnemyRandom;
+    public int currentEnemies;
+    public int EnemyKillsInRoom = -1;
+    public int EnemyRandom;
+    
+    
     
     public Sprite WallSprite; 
     
     public bool TempP = false;
     
-    public GameObject secondObject;
+    public GameObject DoorRight;
+    public GameObject DoorLeft;
     
     
     
@@ -46,6 +49,7 @@ public class SpawnInCollider : MonoBehaviour
             CancelInvoke("SpawnEnemy");
             TempP = true;
             currentEnemies = 0;
+            
 
         }
     }
@@ -56,10 +60,17 @@ public class SpawnInCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && TempP == false)
         {
-            Collider2D collider = secondObject.GetComponent<Collider2D>();
+            Collider2D collider = DoorRight.GetComponent<Collider2D>();
             collider.isTrigger = false;
-            SpriteRenderer spriteRenderer = secondObject.GetComponent<SpriteRenderer>();
+            SpriteRenderer spriteRenderer = DoorRight.GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = WallSprite;
+            
+            Collider2D collider2 = DoorLeft.GetComponent<Collider2D>();
+            collider2.isTrigger = false;
+            SpriteRenderer spriteRenderer2 = DoorLeft.GetComponent<SpriteRenderer>();
+            spriteRenderer2.sprite = WallSprite;
+            
+            
             InvokeRepeating("SpawnEnemy", 0f, spawnInterval);
         }
 
@@ -75,10 +86,15 @@ public class SpawnInCollider : MonoBehaviour
             EnemyKillsInRoom++;
             if (EnemyKillsInRoom >= EnemyRandom)
             {
-                Collider2D collider = secondObject.GetComponent<Collider2D>();
+                Collider2D collider = DoorRight.GetComponent<Collider2D>();
                 collider.isTrigger = true;
-                SpriteRenderer spriteRenderer = secondObject.GetComponent<SpriteRenderer>();
+                SpriteRenderer spriteRenderer = DoorRight.GetComponent<SpriteRenderer>();
                 spriteRenderer.sprite = null;
+                
+                Collider2D collider2 = DoorLeft.GetComponent<Collider2D>();
+                collider2.isTrigger = true;
+                SpriteRenderer spriteRenderer2 = DoorLeft.GetComponent<SpriteRenderer>();
+                spriteRenderer2.sprite = null;
             }
         }
     }

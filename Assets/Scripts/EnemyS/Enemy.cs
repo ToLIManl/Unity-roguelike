@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
@@ -48,7 +49,8 @@ public class Enemy : MonoBehaviour
     private bool IsDamage = false;
     public bool time = false;
 
-
+    
+    private NavMeshAgent agent;
 
     
     
@@ -57,9 +59,9 @@ public class Enemy : MonoBehaviour
     void Start()
     {
 
-        
+        agent = GetComponent<NavMeshAgent>();
         HP = MaxHP;
-        
+        transform.rotation = Quaternion.Euler(0, 0, 0);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         Vector3 customPosition = new Vector3(-1, 4000, 0);
         
@@ -74,14 +76,18 @@ public class Enemy : MonoBehaviour
 
         fill.color = gradient.Evaluate(1f);
         fill.color = gradient.Evaluate(slider.normalizedValue);
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+        
     }
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        //transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        
+        agent.SetDestination(player.transform.position);
         bar.transform.position = new Vector3(transform.position.x, transform.position.y - OffsetBarY, transform.position.z - OffsetBarZ);
     }
-
 
 
     void OnTriggerEnter2D(Collider2D collision) //BULLET

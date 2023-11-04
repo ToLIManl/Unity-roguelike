@@ -46,12 +46,12 @@ public class TeleportObject : MonoBehaviour
         {
             MoveTowardsTarget();
         }
-        if (SpawnInCollider.EnemyKillsInRoom >= SpawnInCollider.EnemyRandom)
+        //if (SpawnInCollider.EnemyKillsInRoom >= SpawnInCollider.EnemyRandom)
         {
             isMoving = true;
             targetPosition = targetPosition2;
             //targetObject.position = targetPosition2;
-            SpawnInCollider.EnemyKillsInRoom = 0;
+            //SpawnInCollider.EnemyKillsInRoom = 0;
 
         }
         
