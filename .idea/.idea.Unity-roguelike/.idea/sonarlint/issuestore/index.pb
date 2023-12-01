@@ -81,3 +81,5 @@ M
 Assets/Scripts/Others/Coin.cs,9\9\99315540808e3f537bbba668ca17a783b84a0b14
 K
 Assets/Scripts/Teleport2.cs,1\8\18c3bb4690dd632c82e1cac61e4b9f6d6d6714d0
+R
+"ProjectSettings/NavMeshAreas.asset,e\1\e1e73dbaf0c5aeb2708d980653afae43680f5a2f
